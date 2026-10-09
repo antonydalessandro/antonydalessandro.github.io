@@ -234,21 +234,42 @@ margin: 0;
 padding: 0;
 }
 
+/* Fix finale per PC e Smartphone */
+html, body {
+background-color: #1a1a1a !important;
+color: #ffffff;
+overflow-x: hidden;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
 .container {
-max-width: 100% !important;
+max-width: 500px !important;
 width: 100% !important;
 box-sizing: border-box;
-padding: 0 10px !important;
+padding: 0 15px !important;
 margin: 0 auto !important;
 }
 
-/* Titolo in alto rimpicciolito per stare su una sola riga */
+/* Titolo elegante: max 16px su PC, proporzionato su Smartphone */
 .site-title {
-font-size: 3.8vw !important;
+font-size: clamp(12px, 3.5vw, 16px) !important;
 white-space: nowrap !important;
 word-break: keep-all !important;
 text-align: center;
-letter-spacing: 1px !important;
+letter-spacing: 1.5px !important;
+margin-top: 10px !important;
+margin-bottom: 15px !important;
+}
+
+/* Logo elegante con angoli morbidi */
+.logo-ad {
+max-width: 110px !important;
+height: auto !important;
+border-radius: 16px !important;
+display: block !important;
+margin: 0 auto !important;
 }
 
 /* Nome compositore */
@@ -261,6 +282,7 @@ img {
 max-width: 100%;
 height: auto;
 }
+
 
     </style>
 </head>
