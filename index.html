@@ -1,4 +1,58 @@
-  html, body {
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTONY D'ALESSANDRO | COMPOSER</title>
+    <meta name="description" content="Official website of composer Antony D'Alessandro. Listen on Spotify, Apple Music, Amazing Radio, and all major streaming platforms.">
+    <meta name="keywords" content="Antony D'Alessandro, Composer, Sci-Fi Tekno, Bluemoor, Chiaroscuro, Amazing Radio, Spotify">
+    <meta name="author" content="Antony D'Alessandro">
+
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="ANTONY D'ALESSANDRO | COMPOSER">
+    <meta property="og:description" content="Exploring and creating from within is where true magic happens.">
+    <meta property="og:image" content="foto.jpg">
+    <meta property="og:url" content="https://antonydalessandro.music">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Antony D'Alessandro",
+      "jobTitle": "Composer",
+      "url": "https://antonydalessandro.music",
+      "sameAs": [
+        "https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP",
+        "https://music.apple.com/gb/artist/antony-dalessandro/1066494662",
+        "https://amazingradio.com/profile/antonydalessandro",
+        "https://www.youtube.com/@AntonyDAlessandro",
+        "https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA",
+        "https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro",
+        "https://www.deezer.com/en/artist/9484718",
+        "https://soundcloud.com/antonydalessandro",
+        "https://antonydalessandro.bandcamp.com",
+        "https://www.tiktok.com/@antony.dalessandro",
+        "https://x.com/AntonyD_Music",
+        "https://myspace.com/antonydalessandro"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
             background-color: #1a1a1a !important;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
@@ -84,6 +138,77 @@
         .social-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 50px;
+            justify-items: center;
+        }
+
+        .social-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+        }
+
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.14);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.25);
+        }
+
+        /* 8. Sezione Biografia */
+        .bio-section {
+            background-color: #222222;
+            border: 1px solid #2e2e2e;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: left;
+            line-height: 1.85;
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+
+        .quote-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: #888888;
+            letter-spacing: 1px;
+        }
+
+        .bio-section p {
+            margin-bottom: 18px;
+        }
+
+        .bio-section p:last-child {
+            margin-bottom: 0;
+        }
+
         .nowrap {
             white-space: nowrap;
         }
@@ -129,6 +254,394 @@
         <div class="subtitle">COMPOSER</div>
 
         <!-- 7. Griglia Icone Streaming Circolari -->
+        <div class="social-grid">
+
+            <!-- 1. Bandcamp -->
+            <a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="social-icon" title="Bandcamp" aria-label="Bandcamp">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#629aa9"/><path d="M13 33l8-16h16l-8 16H13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 2. X (Twitter) -->
+            <a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="social-icon" title="X" aria-label="X">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M32 15h3.5l-7.6 8.7L37 35h-7l-5.5-7.2L18.2 35H14.7l8.1-9.3L13 15h7.2l5 6.6L32 15zm-1.2 18h2L19.2 17h-2l13.6 16z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 3. YouTube Music -->
+            <a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="social-icon" title="YouTube Music" aria-label="YouTube Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><circle cx="25" cy="25" r="13" fill="none" stroke="#ffffff" stroke-width="2.5"/><path d="M22 19l8 6-8 6V19z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 4. MySpace (3 omini in prospettiva) -->
+            <a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="MySpace" aria-label="MySpace">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><circle cx="21" cy="20" r="4.5" fill="#ffffff"/><path d="M14 33c0-4 3.1-7 7-7s7 3 7 7v1H14v-1z" fill="#ffffff"/><circle cx="31.5" cy="21.5" r="3.5" fill="#ffffff"/><path d="M26.5 33c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5v1h-11v-1z" fill="#ffffff" opacity="0.85"/></svg>
+            </a>
+
+            <!-- 5. Amazing Radio (versione radio circolare pulita) -->
+            <a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="Amazing Radio" aria-label="Amazing Radio">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#111111"/><circle cx="25" cy="25" r="21" fill="none" stroke="#dfbd69" stroke-width="2"/><line x1="16" y1="12" x2="22" y2="18" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="11" r="1.5" fill="#dfbd69"/><circle cx="25" cy="26" r="8" fill="none" stroke="#dfbd69" stroke-width="1.5"/><circle cx="25" cy="26" r="4" fill="#dfbd69"/><path d="M21 16h8" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+
+            <!-- 6. SoundCloud -->
+            <a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="SoundCloud" aria-label="SoundCloud">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF5500"/><path d="M13 29.5a2 2 0 002 2h.2V25a2 2 0 00-2 2v2.5zm3-5.5v7.5h1.2V23H16zm3-1v8.5h1.2V22H19zm3-.8v9.3h1.2V20.2H22zm15.5 3.5a5.2 5.2 0 00-5.1-4.5 5.5 5.5 0 00-5.1 3.4v8.9h14.2a3 3 0 000-6c-.1 0-.1 0 0 0z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 7. TikTok -->
+            <a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="social-icon" title="TikTok" aria-label="TikTok">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M26 13h4a8 8 0 005 4v4a11 11 0 01-5-2v10a8 8 0 11-8-8c.7 0 1.4.1 2 .3V20a12 12 0 1010 11V13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 8. YouTube -->
+            <a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="social-icon" title="YouTube" aria-label="YouTube">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><path d="M34 25l-12-7v14l12-7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 9. Amazon Music -->
+            <a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="social-icon" title="Amazon Music" aria-label="Amazon Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#00A8E1"/><path d="M31.2 26.2c-.3-.4-.8-.6-1.5-.6-.9 0-1.6.4-2 1.1-.2.3-.3.7-.4 1.1h3.9v-1.6zm-3.9 2.8c.1.5.2.9.5 1.2.4.4 1 .6 1.8.6.8 0 1.5-.3 2.1-.8l1.4 1c-.9 1-2.1 1.6-3.6 1.6-1.4 0-2.5-.4-3.4-1.3-.8-.8-1.2-2-1.2-3.3 0-1.4.4-2.5 1.3-3.4.8-.8 2-1.3 3.3-1.3 1.3 0 2.4.4 3.1 1.1.8.8 1.1 1.8 1.1 3.2v.2h-6.5zm12.3 6.7c-8.9 3.5-17.6.7-19.1-.1-.3-.2-.1-.5.3-.4 4.4 1.6 12.9 2.1 18.5-.8.6-.3 1 .4.3.7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 10. Deezer -->
+            <a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="social-icon" title="Deezer" aria-label="Deezer">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FEAA2D"/><path d="M32 18h5v4h-5zm0 6h5v4h-5zm0 6h5v4h-5zm-7-6h5v4h-5zm0 6h5v4h-5zm-7 0h5v4h-5zm0-6h5v4h-5zm-7 6h5v4h-5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 11. Apple Music -->
+            <a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="
+
+Sent from Outlook for iOS
+From: Antony D'Alessandro <antonydalessandro@hotmail.com>
+Sent: Monday, 12 October 2026 21:25:06
+To: Salvatore D'Alessandro <sevydalessandro@gmail.com>
+Subject: Re:
+ 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTONY D'ALESSANDRO | COMPOSER</title>
+    <meta name="description" content="Official website of composer Antony D'Alessandro. Listen on Spotify, Apple Music, Amazing Radio, and all major streaming platforms.">
+    <meta name="keywords" content="Antony D'Alessandro, Composer, Sci-Fi Tekno, Bluemoor, Chiaroscuro, Amazing Radio, Spotify">
+    <meta name="author" content="Antony D'Alessandro">
+
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="ANTONY D'ALESSANDRO | COMPOSER">
+    <meta property="og:description" content="Exploring and creating from within is where true magic happens.">
+    <meta property="og:image" content="foto.jpg">
+    <meta property="og:url" content="https://antonydalessandro.music">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Antony D'Alessandro",
+      "jobTitle": "Composer",
+      "url": "https://antonydalessandro.music",
+      "sameAs": [
+        "https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP",
+        "https://music.apple.com/gb/artist/antony-dalessandro/1066494662",
+        "https://amazingradio.com/profile/antonydalessandro",
+        "https://www.youtube.com/@AntonyDAlessandro",
+        "https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA",
+        "https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro",
+        "https://www.deezer.com/en/artist/9484718",
+        "https://soundcloud.com/antonydalessandro",
+        "https://antonydalessandro.bandcamp.com",
+        "https://www.tiktok.com/@antony.dalessandro",
+        "https://x.com/AntonyD_Music",
+        "https://myspace.com/antonydalessandro"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #1a1a1a !important;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 20px;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 500px !important;
+            width: 100% !important;
+            text-align: center;
+            padding: 0 15px !important;
+            margin: 0 auto !important;
+        }
+
+        /* 1. Logo AD */
+        .logo-ad {
+            max-width: 110px !important;
+            height: auto !important;
+            margin-bottom: 15px;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            border-radius: 16px !important;
+            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.5));
+        }
+
+        /* 2. Nome Sito / Label */
+        .site-title {
+            font-size: clamp(12px, 3.5vw, 16px) !important;
+            font-weight: 700;
+            letter-spacing: 1.5px !important;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-top: 10px !important;
+            margin-bottom: 25px !important;
+            white-space: nowrap !important;
+            word-break: keep-all !important;
+        }
+
+        /* 4. Foto Profilo Quadrata ed Imponente */
+        .profile-photo {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #2e2e2e;
+            margin-bottom: 25px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 5 e 6. Nome Compositore e Qualifica */
+        h1 {
+            font-size: 20px !important;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #888888;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* 7. Griglia Icone Streaming */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 50px;
+            justify-items: center;
+        }
+
+        .social-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+        }
+
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.14);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.25);
+        }
+
+        /* 8. Sezione Biografia */
+        .bio-section {
+            background-color: #222222;
+            border: 1px solid #2e2e2e;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: left;
+            line-height: 1.85;
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+
+        .quote-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: #888888;
+            letter-spacing: 1px;
+        }
+
+        .bio-section p {
+            margin-bottom: 18px;
+        }
+
+        .bio-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        /* 9. Footer Centrato */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #aaaaaa;
+        }
+
+        @media (max-width: 580px) {
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+            }
+            .social-icon { width: 46px; height: 46px; }
+            .bio-section { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       
+        <!-- 1. Logo AD Originale -->
+        <img src="logo.jpg" alt="Logo AD" class="logo-ad" onerror="this.style.display='none'">
+
+        <!-- 2. Nome Sito / Label -->
+        <div class="site-title">ANTONYDALESSANDRO.MUSIC</div>
+
+        <!-- 4. Foto Profilo Quadrata ed Imponente -->
+        <img src="foto.jpg" alt="Antony D'Alessandro" class="profile-photo" onerror="this.style.display='none'">
+
+        <!-- 5 e 6. Nome Compositore e Titolo -->
+        <h1>ANTONY D'ALESSANDRO</h1>
+        <div class="subtitle">COMPOSER</div>
+
+        <!-- 7. Griglia Icone Streaming Circolari -->
+        <div class="social-grid">
+
+            <!-- 1. Bandcamp -->
+            <a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="social-icon" title="Bandcamp" aria-label="Bandcamp">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#629aa9"/><path d="M13 33l8-16h16l-8 16H13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 2. X (Twitter) -->
+            <a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="social-icon" title="X" aria-label="X">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M32 15h3.5l-7.6 8.7L37 35h-7l-5.5-7.2L18.2 35H14.7l8.1-9.3L13 15h7.2l5 6.6L32 15zm-1.2 18h2L19.2 17h-2l13.6 16z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 3. YouTube Music -->
+            <a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="social-icon" title="YouTube Music" aria-label="YouTube Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><circle cx="25" cy="25" r="13" fill="none" stroke="#ffffff" stroke-width="2.5"/><path d="M22 19l8 6-8 6V19z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 4. MySpace (3 omini in prospettiva) -->
+            <a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="MySpace" aria-label="MySpace">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><circle cx="21" cy="20" r="4.5" fill="#ffffff"/><path d="M14 33c0-4 3.1-7 7-7s7 3 7 7v1H14v-1z" fill="#ffffff"/><circle cx="31.5" cy="21.5" r="3.5" fill="#ffffff"/><path d="M26.5 33c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5v1h-11v-1z" fill="#ffffff" opacity="0.85"/></svg>
+            </a>
+
+            <!-- 5. Amazing Radio (versione radio circolare pulita) -->
+            <a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="Amazing Radio" aria-label="Amazing Radio">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#111111"/><circle cx="25" cy="25" r="21" fill="none" stroke="#dfbd69" stroke-width="2"/><line x1="16" y1="12" x2="22" y2="18" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="11" r="1.5" fill="#dfbd69"/><circle cx="25" cy="26" r="8" fill="none" stroke="#dfbd69" stroke-width="1.5"/><circle cx="25" cy="26" r="4" fill="#dfbd69"/><path d="M21 16h8" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+
+            <!-- 6. SoundCloud -->
+            <a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="SoundCloud" aria-label="SoundCloud">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF5500"/><path d="M13 29.5a2 2 0 002 2h.2V25a2 2 0 00-2 2v2.5zm3-5.5v7.5h1.2V23H16zm3-1v8.5h1.2V22H19zm3-.8v9.3h1.2V20.2H22zm15.5 3.5a5.2 5.2 0 00-5.1-4.5 5.5 5.5 0 00-5.1 3.4v8.9h14.2a3 3 0 000-6c-.1 0-.1 0 0 0z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 7. TikTok -->
+            <a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="social-icon" title="TikTok" aria-label="TikTok">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M26 13h4a8 8 0 005 4v4a11 11 0 01-5-2v10a8 8 0 11-8-8c.7 0 1.4.1 2 .3V20a12 12 0 1010 11V13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 8. YouTube -->
+            <a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="social-icon" title="YouTube" aria-label="YouTube">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><path d="M34 25l-12-7v14l12-7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 9. Amazon Music -->
+            <a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="social-icon" title="Amazon Music" aria-label="Amazon Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#00A8E1"/><path d="M31.2 26.2c-.3-.4-.8-.6-1.5-.6-.9 0-1.6.4-2 1.1-.2.3-.3.7-.4 1.1h3.9v-1.6zm-3.9 2.8c.1.5.2.9.5 1.2.4.4 1 .6 1.8.6.8 0 1.5-.3 2.1-.8l1.4 1c-.9 1-2.1 1.6-3.6 1.6-1.4 0-2.5-.4-3.4-1.3-.8-.8-1.2-2-1.2-3.3 0-1.4.4-2.5 1.3-3.4.8-.8 2-1.3 3.3-1.3 1.3 0 2.4.4 3.1 1.1.8.8 1.1 1.8 1.1 3.2v.2h-6.5zm12.3 6.7c-8.9 3.5-17.6.7-19.1-.1-.3-.2-.1-.5.3-.4 4.4 1.6 12.9 2.1 18.5-.8.6-.3 1 .4.3.7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 10. Deezer -->
+            <a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="social-icon" title="Deezer" aria-label="Deezer">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FEAA2D"/><path d="M32 18h5v4h-5zm0 6h5v4h-5zm0 6h5v4h-5zm-7-6h5v4h-5zm0 6h5v4h-5zm-7 0h5v4h-5zm0-6h5v4h-5zm-7 6h5v4h-5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 11. Apple Music -->
+            <a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="noopener" class="social-icon" title="Apple Music" aria-label="Apple Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FC3C44"/><path d="M33 16v12.5a4.5 4.5 0 11-3-4.2V19l-9 2v10.5a4.5 4.5 0 11-3-4.2V18l15-3.5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 12. Spotify -->
+            <a href="https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP" target="_blank" rel="noopener" class="social-icon" title="Spotify" aria-label="Spotify">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#1DB954"/><path d="M35 32.5c-.3.5-.9.6-1.4.3-3.9-2.4-8.8-2.9-14.6-1.6-.6.1-1.1-.2-1.2-.8-.1-.6.2-1.1.8-1.2 6.3-1.4 11.8-.8 16.1 1.8.5.3.7.9.3 1.5zm2-4.5c-.4.6-1.2.8-1.7.4-4.5-2.8-11.3-3.6-16.6-1.9-.7.2-1.4-.2-1.6-.8-.2-.7.2-1.4.8-1.6 6.1-1.8 13.6-.9 18.7 2.2.5.4.7 1.2.4 1.7zm.1-4.7c-5.4-3.2-14.3-3.5-19.4-1.9-.8.2-1.7-.3-1.9-1.1-.2-.8.3-1.7 1.1-1.9 5.9-1.8 15.7-1.4 21.9 2.3.7.4 1 1.4.5 2.1-.4.7-1.4.9-2.2.5z" fill="#ffffff"/></svg>
+            </a>
+
+        </div>
+
+        <!-- 8. Sezione Biografia -->
+        <div class="bio-section">
+            <div class="quote-box">
+                <div class="quote-text">“Exploring and creating from within is where true magic happens. It is the highest form of freedom, where the unknown unfolds.”</div>
+                <div class="quote-author">— Antony D'Alessandro —</div>
+            </div>
+
             <p><span class="nowrap">Antony D’Alessandro</span> is an independent composer whose work redefines the boundaries between sonic architecture and emotional depth. Defying simple categorisation, his music weaves a fluid tapestry through <span class="nowrap">avant-garde electronics</span>, ethereal spaces, and <span class="nowrap">art-pop</span>, often laced with psychedelic undertones, turning sound into an uncompromising immersive journey.</p>
 
             <p>Driven by a relentless search for new musical idioms, <span class="nowrap">D’Alessandro</span> conceptualised the genre <span class="nowrap">Sci-Fi Tekno</span> through his albums <span class="nowrap">“TEKNOTICA”</span> and <span class="nowrap">"Teknotica Gold"</span>, fusing dystopian, <span class="nowrap">high-concept</span> atmospheres with driving machine rhythms. This fascination with futuristic themes deepened with the EP <span class="nowrap">"The Borg Queen"</span>, a <span class="nowrap">sci-fi ambient</span> tribute to the iconic <span class="nowrap">Star Trek</span> character, where synthetic textures are translated into a haunting, panoramic aural landscape.</p>
@@ -146,6 +659,758 @@
         <footer>
             <strong>ANTONYDALESSANDRO.MUSIC</strong><br>
             &copy; &#8471; 1982-<span id="year"></span> <span class="nowrap">Antony D’Alessandro</span><br>
+            All Rights Reserved.
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
+Sent from Outlook for iOS
+From: Antony D'Alessandro <antonydalessandro@hotmail.com>
+Sent: Monday, 12 October 2026 21:16:48
+To: Salvatore D'Alessandro <sevydalessandro@gmail.com>
+Subject: Re:
+ 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTONY D'ALESSANDRO | COMPOSER</title>
+    <meta name="description" content="Official website of composer Antony D'Alessandro. Listen on Spotify, Apple Music, Amazing Radio, and all major streaming platforms.">
+    <meta name="keywords" content="Antony D'Alessandro, Composer, Sci-Fi Tekno, Bluemoor, Chiaroscuro, Amazing Radio, Spotify">
+    <meta name="author" content="Antony D'Alessandro">
+
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="ANTONY D'ALESSANDRO | COMPOSER">
+    <meta property="og:description" content="Exploring and creating from within is where true magic happens.">
+    <meta property="og:image" content="foto.jpg">
+    <meta property="og:url" content="https://antonydalessandro.music">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Antony D'Alessandro",
+      "jobTitle": "Composer",
+      "url": "https://antonydalessandro.music",
+      "sameAs": [
+        "https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP",
+        "https://music.apple.com/gb/artist/antony-dalessandro/1066494662",
+        "https://amazingradio.com/profile/antonydalessandro",
+        "https://www.youtube.com/@AntonyDAlessandro",
+        "https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA",
+        "https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro",
+        "https://www.deezer.com/en/artist/9484718",
+        "https://soundcloud.com/antonydalessandro",
+        "https://antonydalessandro.bandcamp.com",
+        "https://www.tiktok.com/@antony.dalessandro",
+        "https://x.com/AntonyD_Music",
+        "https://myspace.com/antonydalessandro"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 1. Logo AD Vettoriale Trasparente */
+        .logo-ad {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.5));
+        }
+
+        /* 2. Nome Sito / Label */
+        .site-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+            white-space: nowrap !important;
+        }
+
+        /* 4. Foto Profilo Quadrata ed Imponente */
+        .profile-photo {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #2e2e2e;
+            margin-bottom: 25px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 5 e 6. Nome Compositore e Qualifica */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #888888;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* 7. Griglia Icone Streaming */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+            margin-bottom: 50px;
+            justify-items: center;
+        }
+
+        .social-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+        }
+
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.14);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.25);
+        }
+
+        /* 8. Sezione Biografia */
+        .bio-section {
+            background-color: #222222;
+            border: 1px solid #2e2e2e;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: left;
+            line-height: 1.85;
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+
+        .quote-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: #888888;
+            letter-spacing: 1px;
+        }
+
+        .bio-section p {
+            margin-bottom: 18px;
+        }
+
+        .bio-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Utility per blocco testi biografia */
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        /* 9. Footer Centrato */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #aaaaaa;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 580px) {
+            .site-title { font-size: 1.5rem; }
+            h1 { font-size: 1.7rem; }
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+            }
+            .social-icon { width: 46px; height: 46px; }
+            .bio-section { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       
+        <!-- 1. Logo AD Vettoriale Trasparente -->
+        <svg class="logo-ad" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Logo AD">
+            <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#dfbd69"/>
+                    <stop offset="50%" stop-color="#c59b47"/>
+                    <stop offset="100%" stop-color="#9e7328"/>
+                </linearGradient>
+            </defs>
+            <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="110" fill="url(#goldGrad)" letter-spacing="-2">AD</text>
+        </svg>
+
+        <!-- 2. Nome Sito / Label -->
+        <div class="site-title">ANTONYDALESSANDRO.MUSIC</div>
+
+        <!-- 4. Foto Profilo Quadrata ed Imponente -->
+        <img src="foto.jpg" alt="Antony D'Alessandro" class="profile-photo" onerror="this.style.display='none'">
+
+        <!-- 5 e 6. Nome Compositore e Titolo -->
+        <h1>ANTONY D'ALESSANDRO</h1>
+        <div class="subtitle">COMPOSER</div>
+
+        <!-- 7. Griglia 12 Icone Streaming Circolari (2 righe da 6) -->
+        <div class="social-grid">
+
+            <!-- 1. Bandcamp -->
+            <a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="social-icon" title="Bandcamp" aria-label="Bandcamp">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#629aa9"/><path d="M13 33l8-16h16l-8 16H13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 2. X (Twitter) -->
+            <a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="social-icon" title="X" aria-label="X">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M32 15h3.5l-7.6 8.7L37 35h-7l-5.5-7.2L18.2 35H14.7l8.1-9.3L13 15h7.2l5 6.6L32 15zm-1.2 18h2L19.2 17h-2l13.6 16z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 3. YouTube Music -->
+            <a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="social-icon" title="YouTube Music" aria-label="YouTube Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><circle cx="25" cy="25" r="13" fill="none" stroke="#ffffff" stroke-width="2.5"/><path d="M22 19l8 6-8 6V19z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 4. MySpace (3 omini in prospettiva) -->
+            <a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="MySpace" aria-label="MySpace">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><circle cx="21" cy="20" r="4.5" fill="#ffffff"/><path d="M14 33c0-4 3.1-7 7-7s7 3 7 7v1H14v-1z" fill="#ffffff"/><circle cx="31.5" cy="21.5" r="3.5" fill="#ffffff"/><path d="M26.5 33c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5v1h-11v-1z" fill="#ffffff" opacity="0.85"/></svg>
+            </a>
+
+            <!-- 5. Amazing Radio (versione radio circolare pulita) -->
+            <a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="Amazing Radio" aria-label="Amazing Radio">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#111111"/><circle cx="25" cy="25" r="21" fill="none" stroke="#dfbd69" stroke-width="2"/><line x1="16" y1="12" x2="22" y2="18" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="11" r="1.5" fill="#dfbd69"/><circle cx="25" cy="26" r="8" fill="none" stroke="#dfbd69" stroke-width="1.5"/><circle cx="25" cy="26" r="4" fill="#dfbd69"/><path d="M21 16h8" stroke="#dfbd69" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+
+            <!-- 6. SoundCloud -->
+            <a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="SoundCloud" aria-label="SoundCloud">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF5500"/><path d="M13 29.5a2 2 0 002 2h.2V25a2 2 0 00-2 2v2.5zm3-5.5v7.5h1.2V23H16zm3-1v8.5h1.2V22H19zm3-.8v9.3h1.2V20.2H22zm15.5 3.5a5.2 5.2 0 00-5.1-4.5 5.5 5.5 0 00-5.1 3.4v8.9h14.2a3 3 0 000-6c-.1 0-.1 0 0 0z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 7. TikTok -->
+            <a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="social-icon" title="TikTok" aria-label="TikTok">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M26 13h4a8 8 0 005 4v4a11 11 0 01-5-2v10a8 8 0 11-8-8c.7 0 1.4.1 2 .3V20a12 12 0 1010 11V13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 8. YouTube -->
+            <a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="social-icon" title="YouTube" aria-label="YouTube">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><path d="M34 25l-12-7v14l12-7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 9. Amazon Music -->
+            <a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="social-icon" title="Amazon Music" aria-label="Amazon Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#00A8E1"/><path d="M31.2 26.2c-.3-.4-.8-.6-1.5-.6-.9 0-1.6.4-2 1.1-.2.3-.3.7-.4 1.1h3.9v-1.6zm-3.9 2.8c.1.5.2.9.5 1.2.4.4 1 .6 1.8.6.8 0 1.5-.3 2.1-.8l1.4 1c-.9 1-2.1 1.6-3.6 1.6-1.4 0-2.5-.4-3.4-1.3-.8-.8-1.2-2-1.2-3.3 0-1.4.4-2.5 1.3-3.4.8-.8 2-1.3 3.3-1.3 1.3 0 2.4.4 3.1 1.1.8.8 1.1 1.8 1.1 3.2v.2h-6.5zm12.3 6.7c-8.9 3.5-17.6.7-19.1-.1-.3-.2-.1-.5.3-.4 4.4 1.6 12.9 2.1 18.5-.8.6-.3 1 .4.3.7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 10. Deezer -->
+            <a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="social-icon" title="Deezer" aria-label="Deezer">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FEAA2D"/><path d="M32 18h5v4h-5zm0 6h5v4h-5zm0 6h5v4h-5zm-7-6h5v4h-5zm0 6h5v4h-5zm-7 0h5v4h-5zm0-6h5v4h-5zm-7 6h5v4h-5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 11. Apple Music -->
+            <a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="noopener" class="social-icon" title="Apple Music" aria-label="Apple Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FC3C44"/><path d="M33 16v12.5a4.5 4.5 0 11-3-4.2V19l-9 2v10.5a4.5 4.5 0 11-3-4.2V18l15-3.5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 12. Spotify -->
+            <a href="https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP" target="_blank" rel="noopener" class="social-icon" title="Spotify" aria-label="Spotify">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#1DB954"/><path d="M35 32.5c-.3.5-.9.6-1.4.3-3.9-2.4-8.8-2.9-14.6-1.6-.6.1-1.1-.2-1.2-.8-.1-.6.2-1.1.8-1.2 6.3-1.4 11.8-.8 16.1 1.8.5.3.7.9.3 1.5zm2-4.5c-.4.6-1.2.8-1.7.4-4.5-2.8-11.3-3.6-16.6-1.9-.7.2-1.4-.2-1.6-.8-.2-.7.2-1.4.8-1.6 6.1-1.8 13.6-.9 18.7 2.2.5.4.7 1.2.4 1.7zm.1-4.7c-5.4-3.2-14.3-3.5-19.4-1.9-.8.2-1.7-.3-1.9-1.1-.2-.8.3-1.7 1.1-1.9 5.9-1.8 15.7-1.4 21.9 2.3.7.4 1 1.4.5 2.1-.4.7-1.4.9-2.2.5z" fill="#ffffff"/></svg>
+            </a>
+
+        </div>
+
+        <!-- 8. Sezione Biografia -->
+        <div class="bio-section">
+            <div class="quote-box">
+                <div class="quote-text">“Exploring and creating from within is where true magic happens. It is the highest form of freedom, where the unknown unfolds.”</div>
+                <div class="quote-author">— Antony D'Alessandro —</div>
+            </div>
+
+            <p><span class="nowrap">Antony D
+
+Sent from Outlook for iOS
+From: Salvatore D'Alessandro <sevydalessandro@gmail.com>
+Sent: Monday, 12 October 2026 21:14:01
+To: antonydalessandro@hotmail.com <antonydalessandro@hotmail.com>
+Subject:
+ 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTONY D'ALESSANDRO | COMPOSER</title>
+    <meta name="description" content="Official website of composer Antony D'Alessandro. Listen on Spotify, Apple Music, Amazing Radio, and all major streaming platforms.">
+    <meta name="keywords" content="Antony D'Alessandro, Composer, Sci-Fi Tekno, Bluemoor, Chiaroscuro, Amazing Radio, Spotify">
+    <meta name="author" content="Antony D'Alessandro">
+
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="ANTONY D'ALESSANDRO | COMPOSER">
+    <meta property="og:description" content="Exploring and creating from within is where true magic happens.">
+    <meta property="og:image" content="foto.jpg">
+    <meta property="og:url" content="https://antonydalessandro.music">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Antony D'Alessandro",
+      "jobTitle": "Composer",
+      "url": "https://antonydalessandro.music",
+      "sameAs": [
+        "https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP",
+        "https://music.apple.com/gb/artist/antony-dalessandro/1066494662",
+        "https://amazingradio.com/profile/antonydalessandro",
+        "https://www.youtube.com/@AntonyDAlessandro",
+        "https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA",
+        "https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro",
+        "https://www.deezer.com/en/artist/9484718",
+        "https://soundcloud.com/antonydalessandro",
+        "https://antonydalessandro.bandcamp.com",
+        "https://www.tiktok.com/@antony.dalessandro",
+        "https://x.com/AntonyD_Music",
+        "https://myspace.com/antonydalessandro"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a; /* Grigio scuro coordinato al fondo del logo AD */
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 1. Logo AD */
+        .logo-ad {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.5));
+        }
+
+        /* 2. Nome Sito / Label */
+        .site-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
+
+        /* 4. Foto Profilo Quadrata ed Imponente */
+        .profile-photo {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #2e2e2e;
+            margin-bottom: 25px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 5 e 6. Nome Compositore e Qualifica */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #888888;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* 7. Griglia 12 Icone Streaming: 2 Righe da 6 Colonne */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+            margin-bottom: 50px;
+            justify-items: center;
+        }
+
+        .social-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+        }
+
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.14);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.25);
+        }
+
+        /* 8. Sezione Biografia */
+        .bio-section {
+            background-color: #222222;
+            border: 1px solid #2e2e2e;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: left;
+            line-height: 1.85;
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+
+        .quote-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: #888888;
+            letter-spacing: 1px;
+        }
+
+        .bio-section p {
+            margin-bottom: 18px;
+        }
+
+        .bio-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 9. Footer Centrato */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #aaaaaa;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 580px) {
+            .site-title { font-size: 1.5rem; }
+            h1 { font-size: 1.7rem; }
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+            }
+            .social-icon { width: 46px; height: 46px; }
+            .bio-section { padding: 28px 20px; }
+        }
+    /* Fix responsive e sfondo abbinato al logo */
+html, body {
+background-color: #1e1e1e !important;
+color: #ffffff;
+overflow-x: hidden;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+/* Fix finale per PC e Smartphone */
+html, body {
+background-color: #1a1a1a !important;
+color: #ffffff;
+overflow-x: hidden;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.container {
+max-width: 500px !important;
+width: 100% !important;
+box-sizing: border-box;
+padding: 0 15px !important;
+margin: 0 auto !important;
+}
+
+/* Titolo elegante: max 16px su PC, proporzionato su Smartphone */
+.site-title {
+font-size: clamp(12px, 3.5vw, 16px) !important;
+white-space: nowrap !important;
+word-break: keep-all !important;
+text-align: center;
+letter-spacing: 1.5px !important;
+margin-top: 10px !important;
+margin-bottom: 15px !important;
+}
+
+/* Logo elegante con angoli morbidi */
+.logo-ad {
+max-width: 110px !important;
+height: auto !important;
+border-radius: 16px !important;
+display: block !important;
+margin: 0 auto !important;
+}
+
+/* Nome compositore */
+h1 {
+font-size: 20px !important;
+text-align: center;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       
+        <!-- 1. Logo AD -->
+        <img src="logo.jpg" alt="Logo AD" class="logo-ad" onerror="this.style.display='none'">
+
+        <!-- 2. Nome Sito / Label -->
+        <div class="site-title">ANTONYDALESSANDRO.MUSIC</div>
+
+        <!-- 4. Foto Profilo Quadrata ed Imponente -->
+        <img src="foto.jpg" alt="Antony D'Alessandro" class="profile-photo" onerror="this.style.display='none'">
+
+        <!-- 5 e 6. Nome Compositore e Titolo -->
+        <h1>ANTONY D'ALESSANDRO</h1>
+        <div class="subtitle">COMPOSER</div>
+
+        <!-- 7. Griglia 12 Icone Streaming (2 righe da 6) -->
+        <div class="social-grid">
+
+            <!-- 1. Bandcamp -->
+            <a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="social-icon" title="Bandcamp" aria-label="Bandcamp">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#629aa9"/><path d="M13 33l8-16h16l-8 16H13z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 2. MySpace -->
+            <a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="MySpace" aria-label="MySpace">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M19 21a4 4 0 100-8 4 4 0 000 8zm0 2c-4 0-8 2-8 5v2h16v-2c0-3-4-5-8-5zm12-2a3 3 0 100-6 3 3 0 000 6zm0 2c-2.5 0-5 1.2-5 3v2h10v-2c0-1.8-2.5-3-5-3z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 3. Amazing Radio -->
+            <a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="Amazing Radio" aria-label="Amazing Radio">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#ffffff"/><circle cx="25" cy="25" r="23" fill="#111111"/><text x="50%" y="44%" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="bold" font-family="Arial">AMAZING</text><text x="50%" y="62%" text-anchor="middle" fill="#ffffff" font-size="7" font-weight="bold" font-family="Arial">RADIO</text></svg>
+            </a>
+
+            <!-- 4. TikTok -->
+            <a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="social-icon" title="TikTok" aria-label="TikTok">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#ffffff"/><path d="M26 13h4a8 8 0 005 4v4a11 11 0 01-5-2v10a8 8 0 11-8-8c.7 0 1.4.1 2 .3V20a12 12 0 1010 11V13z" fill="#000000"/></svg>
+            </a>
+
+            <!-- 5. YouTube -->
+            <a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="social-icon" title="YouTube" aria-label="YouTube">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><path d="M34 25l-12-7v14l12-7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 6. X (Twitter) -->
+            <a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="social-icon" title="X" aria-label="X">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M32 15h3.5l-7.6 8.7L37 35h-7l-5.5-7.2L18.2 35H14.7l8.1-9.3L13 15h7.2l5 6.6L32 15zm-1.2 18h2L19.2 17h-2l13.6 16z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 7. Amazon Music -->
+            <a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="social-icon" title="Amazon Music" aria-label="Amazon Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#00A8E1"/><path d="M31.2 26.2c-.3-.4-.8-.6-1.5-.6-.9 0-1.6.4-2 1.1-.2.3-.3.7-.4 1.1h3.9v-1.6zm-3.9 2.8c.1.5.2.9.5 1.2.4.4 1 .6 1.8.6.8 0 1.5-.3 2.1-.8l1.4 1c-.9 1-2.1 1.6-3.6 1.6-1.4 0-2.5-.4-3.4-1.3-.8-.8-1.2-2-1.2-3.3 0-1.4.4-2.5 1.3-3.4.8-.8 2-1.3 3.3-1.3 1.3 0 2.4.4 3.1 1.1.8.8 1.1 1.8 1.1 3.2v.2h-6.5zm12.3 6.7c-8.9 3.5-17.6.7-19.1-.1-.3-.2-.1-.5.3-.4 4.4 1.6 12.9 2.1 18.5-.8.6-.3 1 .4.3.7z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 8. Deezer -->
+            <a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="social-icon" title="Deezer" aria-label="Deezer">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FEAA2D"/><path d="M32 18h5v4h-5zm0 6h5v4h-5zm0 6h5v4h-5zm-7-6h5v4h-5zm0 6h5v4h-5zm-7 0h5v4h-5zm0-6h5v4h-5zm-7 6h5v4h-5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 9. Apple Music -->
+            <a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="noopener" class="social-icon" title="Apple Music" aria-label="Apple Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FC3C44"/><path d="M33 16v12.5a4.5 4.5 0 11-3-4.2V19l-9 2v10.5a4.5 4.5 0 11-3-4.2V18l15-3.5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 10. SoundCloud -->
+            <a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="SoundCloud" aria-label="SoundCloud">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF5500"/><path d="M13 29.5a2 2 0 002 2h.2V25a2 2 0 00-2 2v2.5zm3-5.5v7.5h1.2V23H16zm3-1v8.5h1.2V22H19zm3-.8v9.3h1.2V20.2H22zm15.5 3.5a5.2 5.2 0 00-5.1-4.5 5.5 5.5 0 00-5.1 3.4v8.9h14.2a3 3 0 000-6c-.1 0-.1 0 0 0z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 11. Spotify -->
+            <a href="https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP" target="_blank" rel="noopener" class="social-icon" title="Spotify" aria-label="Spotify">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#1DB954"/><path d="M35 32.5c-.3.5-.9.6-1.4.3-3.9-2.4-8.8-2.9-14.6-1.6-.6.1-1.1-.2-1.2-.8-.1-.6.2-1.1.8-1.2 6.3-1.4 11.8-.8 16.1 1.8.5.3.7.9.3 1.5zm2-4.5c-.4.6-1.2.8-1.7.4-4.5-2.8-11.3-3.6-16.6-1.9-.7.2-1.4-.2-1.6-.8-.2-.7.2-1.4.8-1.6 6.1-1.8 13.6-.9 18.7 2.2.5.4.7 1.2.4 1.7zm.1-4.7c-5.4-3.2-14.3-3.5-19.4-1.9-.8.2-1.7-.3-1.9-1.1-.2-.8.3-1.7 1.1-1.9 5.9-1.8 15.7-1.4 21.9 2.3.7.4 1 1.4.5 2.1-.4.7-1.4.9-2.2.5z" fill="#ffffff"/></svg>
+            </a>
+
+            <!-- 12. YouTube Music -->
+            <a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="social-icon" title="YouTube Music" aria-label="YouTube Music">
+                <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><circle cx="25" cy="25" r="13" fill="none" stroke="#ffffff" stroke-width="2.5"/><path d="M22 19l8 6-8 6V19z" fill="#ffffff"/></svg>
+            </a>
+
+        </div>
+
+        <!-- 8. Sezione Biografia -->
+        <div class="bio-section">
+            <div class="quote-box">
+                <div class="quote-text">“Exploring and creating from within is where true magic happens. It is the highest form of freedom, where the unknown unfolds.”</div>
+                <div class="quote-author">— Antony D'Alessandro —</div>
+            </div>
+
+            <p>Antony D’Alessandro is an independent composer whose work redefines the boundaries between sonic architecture and emotional depth. Defying simple categorisation, his music weaves a fluid tapestry through avant-garde electronics, ethereal spaces, and art-pop, often laced with psychedelic undertones, turning sound into an uncompromising immersive journey.</p>
+
+            <p>Driven by a relentless search for new musical idioms, D’Alessandro conceptualised the genre "Sci-Fi Tekno" through his albums "TEKNOTICA" and "Teknotica Gold", fusing dystopian, high-concept atmospheres with driving machine rhythms. This fascination with futuristic themes deepened with the EP "The Borg Queen", a sci-fi ambient tribute to the iconic Star Trek character, where synthetic textures are translated into a haunting, panoramic aural landscape.</p>
+
+            <p>The evolution of his sound culminated in "B L U E M O O R", establishing both a visionary opus and an entirely new musical genre, descending straight into the moor of the soul. Within this body of work, D’Alessandro navigates the tension between fragility and digital rigour, shifting from the claustrophobic anxiety of subconscious shadows to the expansive stillness of open space—a sequence of auditory movements that consciously dismantle conventional song structure.</p>
+
+            <p>Despite the vastness of these creative territories, his work remains deeply rooted in personal truth. Bridging the introspective Italian songwriting of the album "Parlo da Solo" and the heartfelt resonance of "All the Love I Can", a dedication to his wife, D’Alessandro grounds his sonic explorations in rare, unfiltered human vulnerability.</p>
+
+            <p>His latest release, "CHIAROSCURO", marks a profound refinement of this artistic trajectory. Living up to its name, this cinematic dark ambient instrumental is built entirely on contrast, playing out like a slow-moving shadow play. It balances fleeting moments of light against a creeping disquiet, steadily intensifying before dissolving into a cold abyss.</p>
+
+            <p>Whether navigating the outermost edges of the unknown or the intricate labyrinths of the human psyche, Antony D’Alessandro continues to craft music for those who seek to lose theoretical boundaries and lose themselves in the sound.</p>
+        </div>
+
+        <!-- 9. Footer Centrato -->
+        <footer>
+            <strong>ANTONYDALESSANDRO.MUSIC</strong><br>
+            &copy; &#8471; 1982-<span id="year"></span> Antony D’Alessandro<br>
             All Rights Reserved.
         </footer>
 
