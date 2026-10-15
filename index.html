@@ -206,5 +206,174 @@ white-space: nowrap;
 footer {
 text-align: center;
 font-size: 0.85rem;
-color: #6
+color: #666666;
+line-height: 1.8;
+letter-spacing: 1px;
+}
 
+footer strong {
+color: #aaaaaa;
+}
+
+@media (max-width: 580px) {
+.social-grid {
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+}
+.social-icon { width: 46px; height: 46px; }
+.bio-section { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Nome Sito / Label -->
+<div class="site-title">ANTONYDALESSANDRO.MUSIC</div>
+
+<!-- Foto Profilo Quadrata -->
+<img src="foto.jpg" alt="Antony D'Alessandro" class="profile-photo" onerror="this.style.display='none'">
+
+<!-- Nome Compositore e Titolo -->
+<h1>ANTONY D'ALESSANDRO</h1>
+<div class="subtitle">COMPOSER</div>
+
+<!-- Griglia Icone Streaming Circolari -->
+<div class="social-grid">
+
+<!-- 1. Bandcamp -->
+<a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="social-icon" title="Bandcamp" aria-label="Bandcamp">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#629aa9"/><path d="M13 33l8-16h16l-8 16H13z" fill="#ffffff"/></svg>
+</a>
+
+<!-- 2. X (Twitter) -->
+<a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="social-icon" title="X" aria-label="X">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M32 15h3.5l-7.6 8.7L37 35h-7l-5.5-7.2L18.2 35H14.7l8.1-9.3L13 15h7.2l5 6.6L32 15zm-1.2 18h2L19.2 17h-2l13.6 16z" fill="#ffffff"/></svg>
+</a>
+
+<!-- 3. YouTube Music -->
+<a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="social-icon" title="YouTube Music" aria-label="YouTube Music">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><circle cx="25" cy="25" r="13" fill="none" stroke="#ffffff" stroke-width="2.5"/><path d="M22 19l8 6-8 6V19z" fill="#ffffff"/></svg>
+</a>
+
+<!-- 4. MySpace -->
+<a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="MySpace" aria-label="MySpace">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#000000"/>
+<circle cx="16" cy="19" r="4.5" fill="#ffffff"/>
+<path d="M8.5 32c0-4 3.3-6.5 7.5-6.5s7.5 2.5 7.5 6.5v1h-15v-1z" fill="#ffffff"/>
+<circle cx="26" cy="21" r="3.5" fill="#ffffff"/>
+<path d="M20 32c0-3 2.5-5 6-5s6 2 6 5v1h-12v-1z" fill="#ffffff" opacity="0.9"/>
+<circle cx="34" cy="22.5" r="2.8" fill="#ffffff"/>
+<path d="M29.5 32c0-2.3 2-4 4.5-4s4.5 1.7 4.5 4v1h-9v-1z" fill="#ffffff" opacity="0.8"/>
+</svg>
+</a>
+
+<!-- 5. Amazing Radio -->
+<a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="Amazing Radio" aria-label="Amazing Radio">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#e2e8f0"/>
+<rect x="12" y="18" width="26" height="16" rx="3.5" fill="#1e293b"/>
+<circle cx="20" cy="26" r="4.5" fill="#cbd5e1"/>
+<circle cx="20" cy="26" r="1.8" fill="#1e293b"/>
+<line x1="30" y1="22" x2="34" y2="22" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="30" y1="26" x2="34" y2="26" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="30" y1="30" x2="34" y2="30" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="17" y1="18" x2="22" y2="11" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+<circle cx="22" cy="11" r="1.2" fill="#475569"/>
+</svg>
+</a>
+
+<!-- 6. SoundCloud -->
+<a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="social-icon" title="SoundCloud" aria-label="SoundCloud">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#FF5500"/>
+<path d="M36.5 25.5c-.7 0-1.4.2-2 .6-.6-3.2-3.4-5.6-6.7-5.6-3.5 0-6.4 2.6-6.9 6h-.2c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.8 3.7 3.8h15.8c2.6 0 4.7-2.1 4.7-4.7 0-2.6-2.1-3.8-4.7-3.8z" fill="#ffffff"/>
+<rect x="13.5" y="26.5" width="1.2" height="7.5" rx="0.6" fill="#ffffff"/>
+<rect x="15.8" y="24.5" width="1.2" height="9.5" rx="0.6" fill="#ffffff"/>
+<rect x="18.1" y="22.5" width="1.2" height="11.5" rx="0.6" fill="#ffffff"/>
+</svg>
+</a>
+
+<!-- 7. TikTok -->
+<a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="social-icon" title="TikTok" aria-label="TikTok">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#000000"/><path d="M27 14h4a7 7 0 005 4v4a10 10 0 01-5-1.5V29a7.5 7.5 0 11-7.5-7.5c.5 0 1 .05 1.5.15V26a3.5 3.5 0 102.5 3.35V14z" fill="#ffffff"/></svg>
+</a>
+
+<!-- 8. YouTube -->
+<a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="social-icon" title="YouTube" aria-label="YouTube">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#FF0000"/><rect x="13" y="17" width="24" height="16" rx="4" fill="#ffffff"/><path d="M22 21l8 4-8 4v-8z" fill="#FF0000"/></svg>
+</a>
+
+<!-- 9. Amazon Music -->
+<a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="social-icon" title="Amazon Music" aria-label="Amazon Music">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#00A8E1"/>
+<path d="M16 26c4 3.5 10 3.5 18 0" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M31 23.5L34 25l-2.2 2.5" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+
+<!-- 10. Deezer -->
+<a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="social-icon" title="Deezer" aria-label="Deezer">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#1e1e1e"/><rect x="11" y="27" width="5" height="5" fill="#f97316"/><rect x="17" y="21" width="5" height="5" fill="#fb923c"/><rect x="17" y="27" width="5" height="5" fill="#f97316"/><rect x="23" y="21" width="5" height="5" fill="#db2777"/><rect x="23" y="27" width="5" height="5" fill="#be185d"/><rect x="29" y="15" width="5" height="5" fill="#22c55e"/><rect x="29" y="21" width="5" height="5" fill="#16a34a"/><rect x="29" y="27" width="5" height="5" fill="#2563eb"/></svg>
+</a>
+
+<!-- 11. Apple Music -->
+<a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="noopener" class="social-icon" title="Apple Music" aria-label="Apple Music">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#FC3C44"/>
+<g transform="translate(13.5, 11.5) scale(0.9)">
+<path d="M15.2 3.2c-.8 1-2 1.7-3.2 1.6-.2-1.1.4-2.3 1.1-3.1.9-1 2.2-1.7 3.1-1.7.2 1.2-.2 2.3-1 3.2zm1.2 1.8c-1.7-.1-3.2 1-4 1-.8 0-2-.9-3.4-.9-1.7 0-3.4 1-4.3 2.6-1.8 3.2-.5 7.9 1.3 10.5.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4 0-2.5 2-3.7 2.1-3.8-1.2-1.6-2.9-1.8-3.5-1.8z" fill="#ffffff"/>
+</g>
+</svg>
+</a>
+
+<!-- 12. Spotify -->
+<a href="https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP" target="_blank" rel="noopener" class="social-icon" title="Spotify" aria-label="Spotify">
+<svg viewBox="0 0 50 50">
+<circle cx="25" cy="25" r="25" fill="#1DB954"/>
+<g transform="translate(11, 11) scale(0.56)">
+<path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm11.5 36.1c-.5.7-1.4 1-2.1.5-5.8-3.5-13.1-4.3-21.7-2.4-.8.2-1.6-.3-1.8-1.1-.2-.8.3-1.6 1.1-1.8 9.5-2.2 17.6-1.2 24 2.7.8.4 1 1.4.5 2.1zm3.1-6.8c-.6.9-1.8 1.2-2.7.6-6.6-4.1-16.7-5.3-24.5-2.9-1 .3-2.1-.3-2.4-1.3-.3-1 .3-2.1 1.3-2.4 9-2.7 20.2-1.4 27.7 3.2.9.6 1.2 1.8.6 2.8zm.3-7.1C33.6 18.5 22.5 18.1 16 20.1c-1.2.4-2.5-.3-2.8-1.5-.4-1.2.3-2.5 1.5-2.8 7.5-2.3 19.8-1.8 27.2 2.6 1.1.6 1.5 2.1.8 3.2-.6 1.1-2.1 1.5-3.2.8z" fill="#ffffff"/>
+</g>
+</svg>
+</a>
+
+</div>
+
+<!-- Sezione Biografia -->
+<div class="bio-section">
+<div class="quote-box">
+<div class="quote-text">“Exploring and creating from within is where true magic happens. It is the highest form of freedom, where the unknown unfolds.”</div>
+<div class="quote-author">— Antony D'Alessandro —</div>
+</div>
+
+<p><span class="nowrap">Antony D’Alessandro</span> is an independent composer whose work redefines the boundaries between sonic architecture and emotional depth. Defying simple categorisation, his music weaves a fluid tapestry through <span class="nowrap">avant-garde electronics</span>, ethereal spaces, and <span class="nowrap">art-pop</span>, often laced with psychedelic undertones, turning sound into an uncompromising immersive journey.</p>
+
+<p>Driven by a relentless search for new musical idioms, <span class="nowrap">D’Alessandro</span> conceptualised the genre <span class="nowrap">Sci-Fi Tekno</span> through his albums <span class="nowrap">“TEKNOTICA”</span> and <span class="nowrap">"Teknotica Gold"</span>, fusing dystopian, <span class="nowrap">high-concept</span> atmospheres with driving machine rhythms. This fascination with futuristic themes deepened with the EP <span class="nowrap">"The Borg Queen"</span>, a <span class="nowrap">sci-fi ambient</span> tribute to the iconic <span class="nowrap">Star Trek</span> character, where synthetic textures are translated into a haunting, panoramic aural landscape.</p>
+
+<p>The evolution of his sound culminated in <span class="nowrap">“B L U E M O O R"</span>, establishing both a visionary opus and an entirely new musical genre, descending straight into the moor of the soul. Within this body of work, <span class="nowrap">D’Alessandro</span> navigates the tension between fragility and digital rigour, shifting from the claustrophobic anxiety of subconscious shadows to the expansive stillness of open space—a sequence of auditory movements that consciously dismantle conventional song structure.</p>
+
+<p>Despite the vastness of these creative territories, his work remains deeply rooted in personal truth. Bridging the introspective Italian songwriting of the album <span class="nowrap">"Parlo da Solo"</span> and the heartfelt resonance of <span class="nowrap">"All the Love I Can"</span>, a dedication to his wife, <span class="nowrap">D’Alessandro</span> grounds his sonic explorations in rare, unfiltered human vulnerability.</p>
+
+<p>His latest release, <span class="nowrap">"CHIAROSCURO"</span>, marks a profound refinement of this artistic trajectory. Living up to its name, this cinematic dark ambient instrumental is built entirely on contrast, playing out like a slow-moving shadow play. It balances fleeting moments of light against a creeping disquiet, steadily intensifying before dissolving into a cold abyss.</p>
+
+<p>Whether navigating the outermost edges of the unknown or the intricate labyrinths of the human psyche, <span class="nowrap">Antony D’Alessandro</span> continues to craft music for those who seek to lose theoretical boundaries and lose themselves in the sound.</p>
+</div>
+
+<!-- Footer Centrato -->
+<footer>
+<strong>ANTONYDALESSANDRO.MUSIC</strong><br>
+&copy; &#8471; 1982-<span id="year"></span> <span class="nowrap">Antony D’Alessandro</span><br>
+All Rights Reserved.
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
