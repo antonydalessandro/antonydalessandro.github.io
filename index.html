@@ -23,80 +23,87 @@ padding: 40px 20px;
 }
 
 .container {
-max-width: 680px;
+max-width: 720px;
 width: 100%;
 text-align: center;
 }
 
+/* Header & Logo */
 .header {
-margin-bottom: 25px;
+margin-bottom: 30px;
 }
 
 .main-logo {
-width: 200px;
+width: 280px;
 height: auto;
 margin-bottom: 15px;
-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
+border-radius: 12px;
+mix-blend-mode: lighten;
 }
 
 .brand-title {
-font-size: 1.1rem;
+font-size: 1.2rem;
 font-weight: 600;
-letter-spacing: 2.5px;
+letter-spacing: 3px;
 color: #d4af37;
 }
 
+/* Profile Section */
 .profile-section {
-margin-bottom: 35px;
+margin-bottom: 40px;
 }
 
 .profile-img {
-width: 140px;
-height: 140px;
+width: 240px;
+height: 240px;
 border-radius: 50%;
 object-fit: cover;
-border: 2px solid #d4af37;
-margin-bottom: 15px;
+border: 3px solid #d4af37;
+margin-bottom: 20px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
 .artist-name {
-font-size: 1.4rem;
+font-size: 1.6rem;
 letter-spacing: 2px;
-margin-bottom: 5px;
+margin-bottom: 6px;
 }
 
 .artist-role {
-font-size: 0.95rem;
+font-size: 1rem;
 letter-spacing: 3px;
 color: #b0b0b0;
 }
 
+/* Platforms Grid (3x4) */
 .platforms-section {
-margin-bottom: 45px;
+margin-bottom: 50px;
 }
 
 .grid-container {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-gap: 20px;
+gap: 25px;
 justify-items: center;
 align-items: center;
 }
 
 .platform-link {
 transition: transform 0.2s ease, opacity 0.2s ease;
+display: inline-block;
 }
 
 .platform-link:hover {
-transform: scale(1.1);
+transform: scale(1.12);
 opacity: 0.9;
 }
 
 .platform-icon {
-width: 65px;
-height: 65px;
-object-fit: contain;
+width: 75px;
+height: 75px;
+object-fit: cover;
 border-radius: 50%;
+background-color: #1a1a1a;
 }
 
 @media (max-width: 480px) {
@@ -104,34 +111,46 @@ border-radius: 50%;
 gap: 15px;
 }
 .platform-icon {
-width: 55px;
-height: 55px;
+width: 60px;
+height: 60px;
 }
 .main-logo {
-width: 160px;
+width: 220px;
+}
+.profile-img {
+width: 180px;
+height: 180px;
 }
 }
 
+/* Bio Section */
 .bio-section {
 text-align: left;
-line-height: 1.6;
+line-height: 1.7;
 color: #cccccc;
-margin-bottom: 40px;
-padding: 0 10px;
+margin-bottom: 50px;
+padding: 0 15px;
 }
 
 .bio-section h3 {
 color: #ffffff;
-margin-bottom: 15px;
+margin-bottom: 20px;
 text-align: center;
-letter-spacing: 1.5px;
+letter-spacing: 2px;
+font-size: 1.3rem;
 }
 
+/* Footer */
 .footer {
-font-size: 0.8rem;
-color: #777777;
+font-size: 0.85rem;
+color: #888888;
 border-top: 1px solid #333333;
-padding-top: 20px;
+padding-top: 25px;
+line-height: 1.6;
+}
+
+.footer p {
+margin-bottom: 5px;
 }
 </style>
 </head>
@@ -152,7 +171,7 @@ padding-top: 20px;
 <p class="artist-role">COMPOSER</p>
 </section>
 
-<!-- Streaming Icons Grid (3x4) -->
+<!-- Streaming Icons Grid -->
 <section class="platforms-section">
 <div class="grid-container">
 
@@ -203,15 +222,16 @@ padding-top: 20px;
 
 <!-- Biography Section -->
 <section class="bio-section">
-<h3>Biografia</h3>
+<h3>BIOGRAFIA</h3>
 <p>
-Inserisci qui il testo della tua biografia personale e professionale...
+Antony D'Alessandro è un compositore e produttore musicale. La sua ricerca artistica spazia tra sonorità moderne, colonne sonore ed esplorazioni elettroacustiche.
 </p>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-<p>&copy; 2026 Antony D'Alessandro. All Rights Reserved.</p>
+<p>ANTONYDALESSANDRO.MUSIC</p>
+<p>&copy; &amp; ℗ 2026 Antony D'Alessandro. All Rights Reserved.</p>
 </footer>
 
 </main>
