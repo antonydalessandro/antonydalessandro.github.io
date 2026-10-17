@@ -11,7 +11,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/* Sfondo identico a quello del Logo (#363638) */
+/* Sfondo identico a quello del Logo (#363638) e spazio superiore ridotto */
 body {
 background-color: #363638;
 color: #ffffff;
@@ -20,7 +20,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-padding: 40px 20px;
+padding: 15px 20px 40px 20px;
 -webkit-hyphens: none;
 -ms-hyphens: none;
 hyphens: none;
@@ -34,13 +34,13 @@ text-align: center;
 
 /* Header & Logo */
 .header {
-margin-bottom: 30px;
+margin-bottom: 25px;
 }
 
 .main-logo {
 width: 280px;
 height: auto;
-margin-bottom: 15px;
+margin-bottom: 12px;
 display: inline-block;
 }
 
@@ -168,7 +168,7 @@ font-size: 0.98rem;
 white-space: nowrap;
 }
 
-/* Footer */
+/* Footer & Copyright Symbols Uniformi */
 .footer {
 font-size: 0.85rem;
 color: #aaaaaa;
@@ -179,6 +179,12 @@ line-height: 1.6;
 
 .footer p {
 margin-bottom: 5px;
+}
+
+.copysymbol {
+display: inline-block;
+font-size: 1rem;
+vertical-align: baseline;
 }
 </style>
 </head>
@@ -284,7 +290,7 @@ Whether navigating the outermost edges of the unknown or the intricate labyrinth
 <!-- Footer -->
 <footer class="footer">
 <p>ANTONYDALESSANDRO.MUSIC</p>
-<p>© ℗ 1982-<span id="year"></span> Antony D'Alessandro</p>
+<p><span class="copysymbol">©</span> <span class="copysymbol">℗</span> 1982-<span id="year"></span> Antony D'Alessandro</p>
 <p>All Rights Reserved.</p>
 </footer>
 
