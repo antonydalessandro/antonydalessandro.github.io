@@ -23,7 +23,7 @@ min-height: 100vh;
 padding: 40px 20px;
 -webkit-hyphens: none;
 -ms-hyphens: none;
-hyphens: none; /* Disattiva qualsiasi sillabazione/spezzatura automatica con trattino */
+hyphens: none;
 }
 
 .container {
@@ -60,7 +60,7 @@ margin-bottom: 40px;
 width: 320px;
 height: 320px;
 object-fit: cover;
-border-radius: 12px; /* Quadrata con angoli elegantemente smussati */
+border-radius: 12px;
 border: 3px solid #d4af37;
 margin-bottom: 20px;
 box-shadow: 0 8px 25px rgba(0,0,0,0.5);
@@ -78,7 +78,7 @@ letter-spacing: 3px;
 color: #b0b0b0;
 }
 
-/* Platforms Grid (3x4) */
+/* Platforms Grid (3x4) - Icone pulite senza cerchi bianchi */
 .platforms-section {
 margin-bottom: 50px;
 }
@@ -93,16 +93,7 @@ align-items: center;
 
 .platform-link {
 transition: transform 0.2s ease, opacity 0.2s ease;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 80px;
-height: 80px;
-border-radius: 50%;
-background-color: #ffffff;
-padding: 6px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-overflow: hidden;
+display: inline-block;
 }
 
 .platform-link:hover {
@@ -111,20 +102,20 @@ opacity: 0.9;
 }
 
 .platform-icon {
-width: 100%;
-height: 100%;
+width: 70px;
+height: 70px;
 object-fit: contain;
 border-radius: 50%;
+display: block;
 }
 
 @media (max-width: 480px) {
 .grid-container {
 gap: 15px;
 }
-.platform-link {
-width: 65px;
-height: 65px;
-padding: 5px;
+.platform-icon {
+width: 55px;
+height: 55px;
 }
 .main-logo {
 width: 220px;
@@ -173,7 +164,6 @@ margin-bottom: 20px;
 font-size: 0.98rem;
 }
 
-/* Classe per evitare che parole con trattini, titoli e generi vengano spezzati */
 .no-wrap {
 white-space: nowrap;
 }
@@ -301,7 +291,6 @@ Whether navigating the outermost edges of the unknown or the intricate labyrinth
 </main>
 
 <script>
-// Aggiorna automaticamente l'anno corrente di copyright ogni 1° gennaio
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
