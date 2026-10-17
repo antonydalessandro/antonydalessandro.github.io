@@ -169,10 +169,10 @@ font-size: 0.98rem;
 white-space: nowrap;
 }
 
-/* Footer in BOLD & Simboli C e P Perfettamente Centrati Universali */
+/* Footer in BOLD & Simboli Copyright Nativi Allineati */
 .footer {
 font-size: 0.85rem;
-font-weight: 600; /* Testo del footer in BOLD */
+font-weight: 700; /* Testo del footer in BOLD */
 color: #aaaaaa;
 border-top: 1px solid #4a4a4d;
 padding-top: 25px;
@@ -184,21 +184,12 @@ letter-spacing: 0.5px;
 margin-bottom: 5px;
 }
 
-.circle-symbol {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 16px;
-height: 16px;
-border: 1.5px solid #aaaaaa;
-border-radius: 50%;
-font-size: 10px;
+.symbol-c, .symbol-p {
+display: inline-block;
 font-weight: 700;
-line-height: 0; /* Forza il centramento perfetto su PC e mobile */
-text-align: center;
+font-size: 0.95rem;
 vertical-align: middle;
 margin-right: 2px;
-padding-top: 1px; /* Precisione millimetrica per PC Windows */
 }
 </style>
 </head>
@@ -304,7 +295,7 @@ Whether navigating the outermost edges of the unknown or the intricate labyrinth
 <!-- Footer -->
 <footer class="footer">
 <p>ANTONYDALESSANDRO.MUSIC</p>
-<p><span class="circle-symbol">C</span> <span class="circle-symbol">P</span> 1982-<span id="year"></span> Antony D'Alessandro</p>
+<p><span class="symbol-c">&copy;</span> <span class="symbol-p">&#8471;</span> 1982-<span id="year"></span> Antony D'Alessandro</p>
 <p>All Rights Reserved.</p>
 </footer>
 
