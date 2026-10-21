@@ -31,7 +31,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 min-height: 100vh;
-padding: 20px 15px;
+padding: 20px 15px 50px 15px;
 }
 
 .main-container {
@@ -40,7 +40,7 @@ max-width: 500px;
 text-align: center;
 }
 
-/* --- PLAYER RADIO ORO & SILVER --- */
+/* --- RADIO PLAYER --- */
 .radio-container {
 width: 100%;
 background: linear-gradient(145deg, #2f2f32, #222224);
@@ -125,7 +125,7 @@ font-variant-numeric: tabular-nums;
 
 .progress-bar-container {
 flex: 1;
-height: 5px;
+height: 6px;
 background: #2a2a2d;
 border-radius: 3px;
 cursor: pointer;
@@ -151,18 +151,19 @@ background: linear-gradient(135deg, #3a3a3d, #252527);
 border: 1px solid var(--silver-dark);
 color: var(--silver-light);
 border-radius: 50%;
-width: 42px;
-height: 42px;
+width: 44px;
+height: 44px;
 display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
 transition: all 0.2s ease;
+-webkit-tap-highlight-color: transparent;
 }
 
 .control-btn.play-btn {
-width: 52px;
-height: 52px;
+width: 54px;
+height: 54px;
 background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
 border: 2px solid var(--silver-light);
 color: #121213;
@@ -170,14 +171,14 @@ box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
 
 .control-btn svg {
-width: 18px;
-height: 18px;
+width: 20px;
+height: 20px;
 fill: currentColor;
 }
 
 .control-btn.play-btn svg {
-width: 22px;
-height: 22px;
+width: 24px;
+height: 24px;
 }
 
 .playlist-container {
@@ -221,50 +222,50 @@ overflow: hidden;
 text-overflow: ellipsis;
 }
 
-/* --- INTESTAZIONE SITO --- */
+/* --- INTESTAZIONE E SEZIONI DEL SITO --- */
 .site-title {
 font-family: 'Cinzel', serif;
-font-size: 1.4rem;
-letter-spacing: 3px;
+font-size: 1.3rem;
+letter-spacing: 2px;
 color: var(--gold-primary);
 margin-bottom: 20px;
 text-transform: uppercase;
 }
 
-/* --- FOTO PROFILO --- */
 .profile-pic {
-width: 180px;
-height: 180px;
+width: 170px;
+height: 170px;
 border-radius: 50%;
 object-fit: cover;
 border: 3px solid var(--gold-primary);
 box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-margin-bottom: 20px;
+margin: 0 auto 20px auto;
+display: block;
 }
 
-/* --- BIOGRAFIA & CITAZIONE --- */
 .bio {
 font-size: 0.95rem;
 line-height: 1.6;
 color: #e0e0e0;
 margin-bottom: 20px;
 font-weight: 300;
+padding: 0 10px;
 }
 
 .quote {
 font-family: 'Cinzel', serif;
-font-size: 0.9rem;
+font-size: 0.88rem;
 font-style: italic;
 color: var(--gold-light);
 margin-bottom: 30px;
 padding: 0 10px;
 }
 
-/* --- GRIGLIA ICONE STREAMING --- */
+/* --- ICONE STREAMING --- */
 .links-grid {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-gap: 15px;
+gap: 12px;
 margin-top: 10px;
 }
 
@@ -283,18 +284,18 @@ transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .link-card:hover {
-transform: translateY(-4px);
+transform: translateY(-3px);
 border-color: var(--gold-primary);
 }
 
 .link-card img {
-width: 32px;
-height: 32px;
+width: 30px;
+height: 30px;
 margin-bottom: 6px;
 }
 
 .link-card span {
-font-size: 0.7rem;
+font-size: 0.68rem;
 font-weight: 500;
 }
 </style>
@@ -303,10 +304,9 @@ font-weight: 500;
 
 <div class="main-container">
 
-<!-- 1. PLAYER RADIO ORO & SILVER (IN ALTO) -->
+<!-- 1. PLAYER RADIO -->
 <div class="radio-container">
 <div class="radio-header">
-<!-- Disegno Icona Radio in Oro -->
 <svg class="radio-icon-svg" viewBox="0 0 24 24">
 <path d="M3.24 6.15C2.51 6.43 2 7.15 2 8v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2H8.3l7.43-3.71c.41-.21.57-.71.36-1.12-.21-.41-.71-.57-1.12-.36L3.24 6.15zM7 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13 1h-8v-2h8v2zm0-4h-8v-2h8v2z"/>
 </svg>
@@ -328,3 +328,232 @@ font-weight: 500;
 <div class="progress-bar-container" id="progress-container">
 <div class="progress-bar" id="progress-bar"></div>
 </div>
+<span class="time-text" id="duration">0:00</span>
+</div>
+</div>
+
+<div class="radio-controls">
+<button class="control-btn" id="prev-btn" type="button" aria-label="Precedente">
+<svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+</button>
+
+<button class="control-btn play-btn" id="play-btn" type="button" aria-label="Play">
+<svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+</button>
+
+<button class="control-btn" id="next-btn" type="button" aria-label="Successivo">
+<svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+</button>
+</div>
+
+<div class="playlist-container" id="playlist"></div>
+</div>
+
+<!-- 2. TITOLO SITO -->
+<h1 class="site-title">ANTONYDALESSANDRO.MUSIC</h1>
+
+<!-- 3. FOTO PROFILO -->
+<img src="foto.jpg" alt="Antony D'Alessandro" class="profile-pic">
+
+<!-- 4. BIOGRAFIA -->
+<p class="bio">
+Compositore e producer indie. Esploro sonorità ambient, elettroniche e cinematografiche, creando paesaggi sonori che raccontano storie ed emozioni.
+</p>
+
+<!-- 5. CITAZIONE -->
+<p class="quote">
+"La musica è il linguaggio con cui il silenzio impara a parlare."
+</p>
+
+<!-- 6. GRIGLIA ICONE STREAMING -->
+<div class="links-grid">
+<a href="https://open.spotify.com" target="_blank" class="link-card">
+<img src="spotify.svg" alt="Spotify">
+<span>Spotify</span>
+</a>
+<a href="https://music.apple.com" target="_blank" class="link-card">
+<img src="apple.svg" alt="Apple Music">
+<span>Apple</span>
+</a>
+<a href="https://music.youtube.com" target="_blank" class="link-card">
+<img src="youtube.svg" alt="YouTube">
+<span>YouTube</span>
+</a>
+<a href="https://amazon.com" target="_blank" class="link-card">
+<img src="amazon.svg" alt="Amazon Music">
+<span>Amazon</span>
+</a>
+<a href="https://deezer.com" target="_blank" class="link-card">
+<img src="deezer.svg" alt="Deezer">
+<span>Deezer</span>
+</a>
+<a href="https://tidal.com" target="_blank" class="link-card">
+<img src="tidal.svg" alt="Tidal">
+<span>Tidal</span>
+</a>
+<a href="https://bandcamp.com" target="_blank" class="link-card">
+<img src="bandcamp.svg" alt="Bandcamp">
+<span>Bandcamp</span>
+</a>
+<a href="https://soundcloud.com" target="_blank" class="link-card">
+<img src="soundcloud.svg" alt="SoundCloud">
+<span>SoundCloud</span>
+</a>
+<a href="https://instagram.com" target="_blank" class="link-card">
+<img src="instagram.svg" alt="Instagram">
+<span>Instagram</span>
+</a>
+<a href="https://facebook.com" target="_blank" class="link-card">
+<img src="facebook.svg" alt="Facebook">
+<span>Facebook</span>
+</a>
+<a href="https://tiktok.com" target="_blank" class="link-card">
+<img src="tiktok.svg" alt="TikTok">
+<span>TikTok</span>
+</a>
+<a href="https://x.com" target="_blank" class="link-card">
+<img src="x.svg" alt="X">
+<span>X</span>
+</a>
+</div>
+
+</div>
+
+<audio id="audio-player" preload="metadata"></audio>
+
+<script>
+const tracks = [
+"The Land of Silence",
+"Hollow Bloom",
+"All the Love I Can",
+"All the Love I Can (Instrumental Version)",
+"Beyond the River",
+"CHIAROSCURO",
+"Il punto della situazione",
+"TikTok Swing",
+"System Error",
+"TK Remaster",
+"Scrubbed",
+"The Collective"
+];
+
+let currentTrackIndex = 0;
+let isPlaying = false;
+
+const audio = document.getElementById('audio-player');
+const playBtn = document.getElementById('play-btn');
+const playIcon = document.getElementById('play-icon');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const trackTitle = document.getElementById('track-title');
+const trackNumber = document.getElementById('track-number');
+const currentTimeEl = document.getElementById('current-time');
+const durationEl = document.getElementById('duration');
+const progressBar = document.getElementById('progress-bar');
+const progressContainer = document.getElementById('progress-container');
+const playlistEl = document.getElementById('playlist');
+
+function renderPlaylist() {
+playlistEl.innerHTML = '';
+tracks.forEach((title, index) => {
+const item = document.createElement('div');
+item.classList.add('playlist-item');
+if (index === currentTrackIndex) item.classList.add('active');
+
+item.innerHTML = `
+<span class="item-index">${String(index + 1).padStart(2, '0')}</span>
+<span class="item-title">${title}</span>
+`;
+
+item.addEventListener('click', () => {
+loadTrack(index);
+playAudio();
+});
+
+playlistEl.appendChild(item);
+});
+}
+
+function loadTrack(index) {
+currentTrackIndex = index;
+const fileNumber = index + 1;
+audio.src = `./${fileNumber}.mp3`;
+trackTitle.textContent = tracks[index];
+trackNumber.textContent = `Traccia ${String(fileNumber).padStart(2, '0')} / 12`;
+renderPlaylist();
+}
+
+function playAudio() {
+isPlaying = true;
+audio.play().then(() => {
+playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+}).catch(err => {
+console.log("Play bloccato dall'utente o file mancante", err);
+});
+}
+
+function pauseAudio() {
+isPlaying = false;
+audio.pause();
+playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+}
+
+playBtn.addEventListener('click', (e) => {
+e.preventDefault();
+if (isPlaying) {
+pauseAudio();
+} else {
+if (!audio.src || audio.src === "") {
+loadTrack(0);
+}
+playAudio();
+}
+});
+
+prevBtn.addEventListener('click', (e) => {
+e.preventDefault();
+currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+loadTrack(currentTrackIndex);
+playAudio();
+});
+
+nextBtn.addEventListener('click', (e) => {
+e.preventDefault();
+currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+loadTrack(currentTrackIndex);
+playAudio();
+});
+
+audio.addEventListener('timeupdate', () => {
+if (isNaN(audio.duration)) return;
+const progressPercent = (audio.currentTime / audio.duration) * 100;
+progressBar.style.width = `${progressPercent}%`;
+currentTimeEl.textContent = formatTime(audio.currentTime);
+durationEl.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener('ended', () => {
+currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+loadTrack(currentTrackIndex);
+playAudio();
+});
+
+progressContainer.addEventListener('click', (e) => {
+const width = progressContainer.clientWidth;
+const clickX = e.offsetX;
+if (!isNaN(audio.duration)) {
+audio.currentTime = (clickX / width) * audio.duration;
+}
+});
+
+function formatTime(seconds) {
+const mins = Math.floor(seconds / 60);
+const secs = Math.floor(seconds % 60);
+return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+// Carica la prima traccia
+loadTrack(0);
+</script>
+</body>
+</html>
