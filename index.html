@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antony D'Alessandro - Gold & Silver Radio Player</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Antony D'Alessandro - Official Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
 --gold-primary: #d4af37;
@@ -13,8 +13,8 @@
 --silver-primary: #c0c0c0;
 --silver-light: #e8e8e8;
 --silver-dark: #707070;
---bg-dark: #1e1e20;
---panel-bg: #2b2b2d;
+--bg-dark: #121213;
+--card-bg: #1e1e20;
 }
 
 * {
@@ -28,46 +28,46 @@ background-color: var(--bg-dark);
 font-family: 'Montserrat', sans-serif;
 color: #ffffff;
 display: flex;
-justify-content: center;
+flex-direction: column;
 align-items: center;
 min-height: 100vh;
-padding: 20px;
+padding: 20px 15px;
 }
 
-/* Container della Radio Vintage & Futuro */
+.main-container {
+width: 100%;
+max-width: 500px;
+text-align: center;
+}
+
+/* --- PLAYER RADIO ORO & SILVER --- */
 .radio-container {
 width: 100%;
-max-width: 520px;
 background: linear-gradient(145deg, #2f2f32, #222224);
 border: 2px solid var(--gold-primary);
 border-radius: 16px;
-padding: 24px;
+padding: 18px;
 box-shadow:
 0 12px 35px rgba(0, 0, 0, 0.6),
 inset 0 1px 1px rgba(255, 255, 255, 0.1),
 0 0 15px rgba(212, 175, 55, 0.2);
-position: relative;
+margin-bottom: 25px;
 }
 
-/* Testata Radio con Dettagli Metallici */
 .radio-header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom: 20px;
-padding-bottom: 12px;
+margin-bottom: 14px;
+padding-bottom: 8px;
 border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.radio-brand {
-font-family: 'Cinzel', serif;
-font-size: 1.1rem;
-font-weight: 700;
-letter-spacing: 2px;
-background: linear-gradient(45deg, var(--gold-light), var(--gold-primary), var(--silver-light));
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-text-transform: uppercase;
+.radio-icon-svg {
+width: 36px;
+height: 36px;
+fill: var(--gold-primary);
+filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 }
 
 .radio-grille {
@@ -82,53 +82,50 @@ background: linear-gradient(to bottom, var(--silver-light), var(--silver-dark));
 border-radius: 2px;
 }
 
-/* Schermo / Display della Radio */
 .radio-screen {
 background: #121213;
 border: 1px solid var(--gold-dark);
 border-radius: 8px;
-padding: 16px;
-margin-bottom: 20px;
+padding: 12px 14px;
+margin-bottom: 14px;
 box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
-position: relative;
-overflow: hidden;
+text-align: left;
 }
 
 .track-number {
-font-size: 0.75rem;
+font-size: 0.7rem;
 color: var(--silver-primary);
 text-transform: uppercase;
 letter-spacing: 1px;
-margin-bottom: 4px;
+margin-bottom: 3px;
 }
 
 .track-title {
-font-size: 1.1rem;
+font-size: 1rem;
 font-weight: 600;
 color: var(--gold-light);
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
-margin-bottom: 12px;
+margin-bottom: 10px;
 }
 
-/* Barra di Avanzamento */
 .progress-area {
 display: flex;
 align-items: center;
-gap: 10px;
+gap: 8px;
 }
 
 .time-text {
-font-size: 0.75rem;
+font-size: 0.7rem;
 color: var(--silver-primary);
-min-width: 38px;
+min-width: 32px;
 font-variant-numeric: tabular-nums;
 }
 
 .progress-bar-container {
 flex: 1;
-height: 6px;
+height: 5px;
 background: #2a2a2d;
 border-radius: 3px;
 cursor: pointer;
@@ -140,28 +137,13 @@ height: 100%;
 width: 0%;
 background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--silver-light));
 border-radius: 3px;
-position: relative;
 }
 
-.progress-bar::after {
-content: '';
-position: absolute;
-right: -5px;
-top: -3px;
-width: 12px;
-height: 12px;
-background: var(--silver-light);
-border: 1px solid var(--gold-dark);
-border-radius: 50%;
-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-/* Controlli della Radio */
 .radio-controls {
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
-margin-bottom: 20px;
+margin-bottom: 14px;
 }
 
 .control-btn {
@@ -169,81 +151,54 @@ background: linear-gradient(135deg, #3a3a3d, #252527);
 border: 1px solid var(--silver-dark);
 color: var(--silver-light);
 border-radius: 50%;
-width: 44px;
-height: 44px;
+width: 42px;
+height: 42px;
 display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
 transition: all 0.2s ease;
-box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-.control-btn:hover {
-border-color: var(--gold-primary);
-color: var(--gold-light);
-transform: translateY(-2px);
 }
 
 .control-btn.play-btn {
-width: 58px;
-height: 58px;
+width: 52px;
+height: 52px;
 background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
 border: 2px solid var(--silver-light);
 color: #121213;
 box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
 
-.control-btn.play-btn:hover {
-transform: scale(1.05);
-background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
-}
-
 .control-btn svg {
-width: 20px;
-height: 20px;
+width: 18px;
+height: 18px;
 fill: currentColor;
 }
 
 .control-btn.play-btn svg {
-width: 26px;
-height: 26px;
+width: 22px;
+height: 22px;
 }
 
-/* Lista Brani Elegante */
 .playlist-container {
 background: #18181a;
 border: 1px solid rgba(192, 192, 192, 0.15);
 border-radius: 8px;
-max-height: 180px;
+max-height: 150px;
 overflow-y: auto;
-padding: 6px;
-}
-
-.playlist-container::-webkit-scrollbar {
-width: 5px;
-}
-
-.playlist-container::-webkit-scrollbar-thumb {
-background: var(--gold-dark);
-border-radius: 3px;
+padding: 4px;
+text-align: left;
 }
 
 .playlist-item {
 display: flex;
 align-items: center;
-padding: 10px 12px;
-border-radius: 6px;
-font-size: 0.85rem;
+padding: 8px 10px;
+border-radius: 5px;
+font-size: 0.82rem;
 color: var(--silver-primary);
 cursor: pointer;
-transition: background 0.2s ease;
 margin-bottom: 2px;
-}
-
-.playlist-item:hover {
-background: rgba(212, 175, 55, 0.1);
-color: var(--gold-light);
 }
 
 .playlist-item.active {
@@ -254,7 +209,7 @@ border-left: 3px solid var(--gold-primary);
 }
 
 .item-index {
-width: 26px;
+width: 24px;
 font-size: 0.75rem;
 opacity: 0.7;
 }
@@ -265,14 +220,96 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+
+/* --- INTESTAZIONE SITO --- */
+.site-title {
+font-family: 'Cinzel', serif;
+font-size: 1.4rem;
+letter-spacing: 3px;
+color: var(--gold-primary);
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+
+/* --- FOTO PROFILO --- */
+.profile-pic {
+width: 180px;
+height: 180px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid var(--gold-primary);
+box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+margin-bottom: 20px;
+}
+
+/* --- BIOGRAFIA & CITAZIONE --- */
+.bio {
+font-size: 0.95rem;
+line-height: 1.6;
+color: #e0e0e0;
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+.quote {
+font-family: 'Cinzel', serif;
+font-size: 0.9rem;
+font-style: italic;
+color: var(--gold-light);
+margin-bottom: 30px;
+padding: 0 10px;
+}
+
+/* --- GRIGLIA ICONE STREAMING --- */
+.links-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+margin-top: 10px;
+}
+
+.link-card {
+background: var(--card-bg);
+border: 1px solid rgba(212, 175, 55, 0.3);
+border-radius: 12px;
+padding: 12px 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: #ffffff;
+transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.link-card:hover {
+transform: translateY(-4px);
+border-color: var(--gold-primary);
+}
+
+.link-card img {
+width: 32px;
+height: 32px;
+margin-bottom: 6px;
+}
+
+.link-card span {
+font-size: 0.7rem;
+font-weight: 500;
+}
 </style>
 </head>
 <body>
 
+<div class="main-container">
+
+<!-- 1. PLAYER RADIO ORO & SILVER (IN ALTO) -->
 <div class="radio-container">
-<!-- Testata Metallica -->
 <div class="radio-header">
-<div class="radio-brand">Antony D'Alessandro Radio</div>
+<!-- Disegno Icona Radio in Oro -->
+<svg class="radio-icon-svg" viewBox="0 0 24 24">
+<path d="M3.24 6.15C2.51 6.43 2 7.15 2 8v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2H8.3l7.43-3.71c.41-.21.57-.71.36-1.12-.21-.41-.71-.57-1.12-.36L3.24 6.15zM7 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13 1h-8v-2h8v2zm0-4h-8v-2h8v2z"/>
+</svg>
 <div class="radio-grille">
 <div class="grille-bar"></div>
 <div class="grille-bar"></div>
@@ -282,7 +319,6 @@ text-overflow: ellipsis;
 </div>
 </div>
 
-<!-- Display / Schermo -->
 <div class="radio-screen">
 <div class="track-number" id="track-number">Traccia 01 / 12</div>
 <div class="track-title" id="track-title">The Land of Silence</div>
@@ -292,167 +328,3 @@ text-overflow: ellipsis;
 <div class="progress-bar-container" id="progress-container">
 <div class="progress-bar" id="progress-bar"></div>
 </div>
-<span class="time-text" id="duration">0:00</span>
-</div>
-</div>
-
-<!-- Controlli Riproduzione -->
-<div class="radio-controls">
-<button class="control-btn" id="prev-btn" title="Brano precedente">
-<svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-</button>
-
-<button class="control-btn play-btn" id="play-btn" title="Play/Pausa">
-<svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-</button>
-
-<button class="control-btn" id="next-btn" title="Brano successivo">
-<svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-</button>
-</div>
-
-<!-- Lista dei 12 Brani -->
-<div class="playlist-container" id="playlist">
-<!-- Generata dinamicamente via JS -->
-</div>
-</div>
-
-<!-- Audio Element Nascosto -->
-<audio id="audio-player"></audio>
-
-<script>
-const tracks = [
-"The Land of Silence",
-"Hollow Bloom",
-"All the Love I Can",
-"All the Love I Can (Instrumental Version)",
-"Beyond the River",
-"CHIAROSCURO",
-"Il punto della situazione",
-"TikTok Swing",
-"System Error",
-"TK Remaster",
-"Scrubbed",
-"The Collective"
-];
-
-let currentTrackIndex = 0;
-let isPlaying = false;
-
-const audio = document.getElementById('audio-player');
-const playBtn = document.getElementById('play-btn');
-const playIcon = document.getElementById('play-icon');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const trackTitle = document.getElementById('track-title');
-const trackNumber = document.getElementById('track-number');
-const currentTimeEl = document.getElementById('current-time');
-const durationEl = document.getElementById('duration');
-const progressBar = document.getElementById('progress-bar');
-const progressContainer = document.getElementById('progress-container');
-const playlistEl = document.getElementById('playlist');
-
-// Inizializza la Playlist Visiva
-function renderPlaylist() {
-playlistEl.innerHTML = '';
-tracks.forEach((title, index) => {
-const item = document.createElement('div');
-item.classList.add('playlist-item');
-if (index === currentTrackIndex) item.classList.add('active');
-
-item.innerHTML = `
-<span class="item-index">${String(index + 1).padStart(2, '0')}</span>
-<span class="item-title">${title}</span>
-`;
-
-item.addEventListener('click', () => {
-loadTrack(index);
-playAudio();
-});
-
-playlistEl.appendChild(item);
-});
-}
-
-// Carica la Traccia (collegata al file numerico, es: 1.mp3)
-function loadTrack(index) {
-currentTrackIndex = index;
-const fileNumber = index + 1;
-audio.src = `${fileNumber}.mp3`;
-trackTitle.textContent = tracks[index];
-trackNumber.textContent = `Traccia ${String(fileNumber).padStart(2, '0')} / 12`;
-renderPlaylist();
-}
-
-// Controlli Play / Pausa
-function playAudio() {
-isPlaying = true;
-audio.play();
-playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-}
-
-function pauseAudio() {
-isPlaying = false;
-audio.pause();
-playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-}
-
-playBtn.addEventListener('click', () => {
-if (isPlaying) {
-pauseAudio();
-} else {
-if (!audio.src) loadTrack(0);
-playAudio();
-}
-});
-
-prevBtn.addEventListener('click', () => {
-currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
-loadTrack(currentTrackIndex);
-playAudio();
-});
-
-nextBtn.addEventListener('click', () => {
-currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-loadTrack(currentTrackIndex);
-playAudio();
-});
-
-// Avanzamento e Tempo
-audio.addEventListener('timeupdate', (e) => {
-const { currentTime, duration } = e.target;
-if (isNaN(duration)) return;
-
-const progressPercent = (currentTime / duration) * 100;
-progressBar.style.width = `${progressPercent}%`;
-
-currentTimeEl.textContent = formatTime(currentTime);
-durationEl.textContent = formatTime(duration);
-});
-
-// Cambio Traccia Automatico a Fine Brano
-audio.addEventListener('ended', () => {
-nextBtn.click();
-});
-
-// Seleziona il punto sulla barra
-progressContainer.addEventListener('click', (e) => {
-const width = progressContainer.clientWidth;
-const clickX = e.offsetX;
-const duration = audio.duration;
-if (!isNaN(duration)) {
-audio.currentTime = (clickX / width) * duration;
-}
-});
-
-function formatTime(seconds) {
-const mins = Math.floor(seconds / 60);
-const secs = Math.floor(seconds % 60);
-return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-}
-
-// Carica la prima traccia all'avvio
-loadTrack(0);
-</script>
-</body>
-</html>
