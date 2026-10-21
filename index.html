@@ -11,7 +11,6 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/* Sfondo identico a quello del Logo (#363638) e spazio superiore azzerato */
 body {
 background-color: #363638;
 color: #ffffff;
@@ -63,7 +62,6 @@ align-items: center;
 gap: 12px;
 }
 
-/* Disegno Radio Grande */
 .radio-icon-svg {
 width: 44px;
 height: 44px;
@@ -72,7 +70,6 @@ filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 flex-shrink: 0;
 }
 
-/* Titolo Integrato dentro il Player */
 .radio-brand-title {
 font-size: 0.95rem;
 font-weight: 600;
@@ -237,18 +234,21 @@ margin-top: 0;
 margin-bottom: 10px;
 }
 
-/* Profile Section */
+/* Profile Section - FOTO PERFETTAMENTE LARGHA QUANTO IL PLAYER SU TUTTI I DISPOSITIVI */
 .profile-section {
 margin-bottom: 40px;
 }
 
 .profile-img {
-width: 425px;
-height: 425px;
+width: 100%;
+max-width: 500px;
+height: auto;
+aspect-ratio: 1 / 1;
 object-fit: cover;
-border-radius: 12px;
-border: 2px solid #d4af37; /* Modificato a 2px per combaciare perfettamente col player */
-margin-bottom: 20px;
+border-radius: 16px;
+border: 2px solid #d4af37;
+margin: 0 auto 20px auto;
+display: block;
 box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
@@ -302,10 +302,6 @@ gap: 15px;
 .platform-icon {
 width: 55px;
 height: 55px;
-}
-.profile-img {
-width: 345px;
-height: 345px;
 }
 .radio-brand-title {
 font-size: 0.8rem;
@@ -591,7 +587,7 @@ playlistEl.appendChild(item);
 function loadTrack(index) {
 currentTrackIndex = index;
 const fileNumber = index + 1;
-audio.src = `./${fileNumber}.mp3`;
+audio.src = fileNumber + '.mp3';
 trackTitle.textContent = tracks[index];
 trackNumber.textContent = `TRACK ${String(fileNumber).padStart(2, '0')} / 12`;
 renderPlaylist();
@@ -617,7 +613,7 @@ e.preventDefault();
 if (isPlaying) {
 pauseAudio();
 } else {
-if (!audio.src || audio.src === "") {
+if (!audio.src || audio.src === "" || audio.src.endsWith('/')) {
 loadTrack(0);
 }
 playAudio();
@@ -640,4 +636,34 @@ playAudio();
 
 audio.addEventListener('timeupdate', () => {
 if (isNaN(audio.duration)) return;
-const progressPercent = (audio.currentTime / audio.duration) *
+const progressPercent = (audio.currentTime / audio.duration) * 100;
+progressBar.style.width = `${progressPercent}%`;
+currentTimeEl.textContent = formatTime(audio.currentTime);
+durationEl.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener('ended', () => {
+currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+loadTrack(currentTrackIndex);
+playAudio();
+});
+
+progressContainer.addEventListener('click', (e) => {
+const width = progressContainer.clientWidth;
+const clickX = e.offsetX;
+if (!isNaN(audio.duration)) {
+audio.currentTime = (clickX / width) * audio.duration;
+}
+});
+
+function formatTime(seconds) {
+const mins = Math.floor(seconds / 60);
+const secs = Math.floor(seconds % 60);
+return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+loadTrack(0);
+</script>
+
+</body>
+</html>
