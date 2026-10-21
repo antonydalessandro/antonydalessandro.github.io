@@ -36,7 +36,7 @@ text-align: center;
 .radio-container {
 width: 100%;
 max-width: 500px;
-margin: 0 auto 25px auto;
+margin: 0 auto 40px auto; /* Aumentato lo spazio dal titolo ANTONYDALESSANDRO.MUSIC */
 background: linear-gradient(145deg, #2f2f32, #222224);
 border: 2px solid #d4af37;
 border-radius: 16px;
@@ -57,21 +57,22 @@ padding-bottom: 8px;
 border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
+/* Disegno Radio Ingrandito Sensibilmente */
 .radio-icon-svg {
-width: 36px;
-height: 36px;
+width: 52px;
+height: 52px;
 fill: #d4af37;
 filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 }
 
 .radio-grille {
 display: flex;
-gap: 3px;
+gap: 4px;
 }
 
 .grille-bar {
-width: 3px;
-height: 14px;
+width: 4px;
+height: 18px;
 background: linear-gradient(to bottom, #e8e8e8, #707070);
 border-radius: 2px;
 }
@@ -221,7 +222,7 @@ margin-bottom: 25px;
 }
 
 .brand-title {
-font-size: 1.0rem; /* Titolo dorato rimpicciolito */
+font-size: 1.0rem;
 font-weight: 600;
 letter-spacing: 3px;
 color: #d4af37;
@@ -244,13 +245,13 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
 .artist-name {
-font-size: 1.35rem; /* Nome rimpicciolito per maggiore equilibrio */
+font-size: 1.35rem;
 letter-spacing: 2px;
 margin-bottom: 6px;
 }
 
 .artist-role {
-font-size: 1rem; /* COMPOSER invariato */
+font-size: 1rem;
 letter-spacing: 3px;
 color: #b0b0b0;
 }
@@ -342,7 +343,7 @@ font-size: 0.98rem;
 white-space: nowrap;
 }
 
-/* Footer in BOLD & Simboli Copyright Nativi Allineati */
+/* Footer */
 .footer {
 font-size: 0.85rem;
 font-weight: 700;
@@ -517,10 +518,8 @@ Whether navigating the outermost edges of the unknown or the intricate labyrinth
 
 </main>
 
-<!-- Elemento Audio Nascosto -->
 <audio id="audio-player" preload="metadata"></audio>
 
-<!-- Script Radio e Anno -->
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
