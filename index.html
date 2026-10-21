@@ -1,57 +1,51 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antony D'Alessandro - Official Site</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Antony D'Alessandro - Composer</title>
 <style>
-:root {
---gold-primary: #d4af37;
---gold-light: #f3e5ab;
---gold-dark: #aa820a;
---silver-primary: #c0c0c0;
---silver-light: #e8e8e8;
---silver-dark: #707070;
---bg-dark: #121213;
---card-bg: #1e1e20;
-}
-
 * {
-box-sizing: border-box;
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 
+/* Sfondo identico a quello del Logo (#363638) e spazio superiore azzerato */
 body {
-background-color: var(--bg-dark);
-font-family: 'Montserrat', sans-serif;
+background-color: #363638;
 color: #ffffff;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 display: flex;
-flex-direction: column;
+justify-content: center;
 align-items: center;
 min-height: 100vh;
-padding: 20px 15px 50px 15px;
+padding: 20px 20px 40px 20px;
+-webkit-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
 }
 
-.main-container {
+.container {
+max-width: 720px;
 width: 100%;
-max-width: 500px;
 text-align: center;
 }
 
-/* --- RADIO PLAYER --- */
+/* --- PLAYER RADIO ORO & SILVER (SOSTITUISCE IL LOGO) --- */
 .radio-container {
 width: 100%;
+max-width: 500px;
+margin: 0 auto 25px auto;
 background: linear-gradient(145deg, #2f2f32, #222224);
-border: 2px solid var(--gold-primary);
+border: 2px solid #d4af37;
 border-radius: 16px;
 padding: 18px;
 box-shadow:
 0 12px 35px rgba(0, 0, 0, 0.6),
 inset 0 1px 1px rgba(255, 255, 255, 0.1),
 0 0 15px rgba(212, 175, 55, 0.2);
-margin-bottom: 25px;
+text-align: left;
 }
 
 .radio-header {
@@ -66,7 +60,7 @@ border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 .radio-icon-svg {
 width: 36px;
 height: 36px;
-fill: var(--gold-primary);
+fill: #d4af37;
 filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 }
 
@@ -78,23 +72,22 @@ gap: 3px;
 .grille-bar {
 width: 3px;
 height: 14px;
-background: linear-gradient(to bottom, var(--silver-light), var(--silver-dark));
+background: linear-gradient(to bottom, #e8e8e8, #707070);
 border-radius: 2px;
 }
 
 .radio-screen {
 background: #121213;
-border: 1px solid var(--gold-dark);
+border: 1px solid #aa820a;
 border-radius: 8px;
 padding: 12px 14px;
 margin-bottom: 14px;
 box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
-text-align: left;
 }
 
 .track-number {
 font-size: 0.7rem;
-color: var(--silver-primary);
+color: #c0c0c0;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-bottom: 3px;
@@ -103,7 +96,7 @@ margin-bottom: 3px;
 .track-title {
 font-size: 1rem;
 font-weight: 600;
-color: var(--gold-light);
+color: #f3e5ab;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -118,7 +111,7 @@ gap: 8px;
 
 .time-text {
 font-size: 0.7rem;
-color: var(--silver-primary);
+color: #c0c0c0;
 min-width: 32px;
 font-variant-numeric: tabular-nums;
 }
@@ -135,7 +128,7 @@ position: relative;
 .progress-bar {
 height: 100%;
 width: 0%;
-background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--silver-light));
+background: linear-gradient(90deg, #aa820a, #d4af37, #e8e8e8);
 border-radius: 3px;
 }
 
@@ -148,8 +141,8 @@ margin-bottom: 14px;
 
 .control-btn {
 background: linear-gradient(135deg, #3a3a3d, #252527);
-border: 1px solid var(--silver-dark);
-color: var(--silver-light);
+border: 1px solid #707070;
+color: #e8e8e8;
 border-radius: 50%;
 width: 44px;
 height: 44px;
@@ -164,8 +157,8 @@ transition: all 0.2s ease;
 .control-btn.play-btn {
 width: 54px;
 height: 54px;
-background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-border: 2px solid var(--silver-light);
+background: linear-gradient(135deg, #d4af37, #aa820a);
+border: 2px solid #e8e8e8;
 color: #121213;
 box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
@@ -188,7 +181,6 @@ border-radius: 8px;
 max-height: 150px;
 overflow-y: auto;
 padding: 4px;
-text-align: left;
 }
 
 .playlist-item {
@@ -197,16 +189,16 @@ align-items: center;
 padding: 8px 10px;
 border-radius: 5px;
 font-size: 0.82rem;
-color: var(--silver-primary);
+color: #c0c0c0;
 cursor: pointer;
 margin-bottom: 2px;
 }
 
 .playlist-item.active {
 background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), transparent);
-color: var(--gold-light);
+color: #f3e5ab;
 font-weight: 600;
-border-left: 3px solid var(--gold-primary);
+border-left: 3px solid #d4af37;
 }
 
 .item-index {
@@ -221,90 +213,165 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+/* ---------------------------------------------------- */
 
-/* --- INTESTAZIONE E SEZIONI DEL SITO --- */
-.site-title {
-font-family: 'Cinzel', serif;
-font-size: 1.3rem;
-letter-spacing: 2px;
-color: var(--gold-primary);
-margin-bottom: 20px;
-text-transform: uppercase;
+.header {
+margin-top: 0;
+margin-bottom: 25px;
 }
 
-.profile-pic {
-width: 170px;
-height: 170px;
-border-radius: 50%;
+.brand-title {
+font-size: 1.0rem; /* Titolo dorato rimpicciolito */
+font-weight: 600;
+letter-spacing: 3px;
+color: #d4af37;
+margin-top: -6px;
+}
+
+/* Profile Section */
+.profile-section {
+margin-bottom: 40px;
+}
+
+.profile-img {
+width: 425px;
+height: 425px;
 object-fit: cover;
-border: 3px solid var(--gold-primary);
-box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-margin: 0 auto 20px auto;
-display: block;
-}
-
-.bio {
-font-size: 0.95rem;
-line-height: 1.6;
-color: #e0e0e0;
-margin-bottom: 20px;
-font-weight: 300;
-padding: 0 10px;
-}
-
-.quote {
-font-family: 'Cinzel', serif;
-font-size: 0.88rem;
-font-style: italic;
-color: var(--gold-light);
-margin-bottom: 30px;
-padding: 0 10px;
-}
-
-/* --- ICONE STREAMING --- */
-.links-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 12px;
-margin-top: 10px;
-}
-
-.link-card {
-background: var(--card-bg);
-border: 1px solid rgba(212, 175, 55, 0.3);
 border-radius: 12px;
-padding: 12px 5px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-decoration: none;
-color: #ffffff;
-transition: transform 0.2s ease, border-color 0.2s ease;
+border: 3px solid #d4af37;
+margin-bottom: 20px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
-.link-card:hover {
-transform: translateY(-3px);
-border-color: var(--gold-primary);
-}
-
-.link-card img {
-width: 30px;
-height: 30px;
+.artist-name {
+font-size: 1.35rem; /* Nome rimpicciolito per maggiore equilibrio */
+letter-spacing: 2px;
 margin-bottom: 6px;
 }
 
-.link-card span {
-font-size: 0.68rem;
+.artist-role {
+font-size: 1rem; /* COMPOSER invariato */
+letter-spacing: 3px;
+color: #b0b0b0;
+}
+
+/* Platforms Grid (3x4) */
+.platforms-section {
+margin-bottom: 50px;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+justify-items: center;
+align-items: center;
+}
+
+.platform-link {
+transition: transform 0.2s ease, opacity 0.2s ease;
+display: inline-block;
+}
+
+.platform-link:hover {
+transform: scale(1.12);
+opacity: 0.9;
+}
+
+.platform-icon {
+width: 70px;
+height: 70px;
+object-fit: contain;
+border-radius: 50%;
+display: block;
+}
+
+@media (max-width: 480px) {
+.grid-container {
+gap: 15px;
+}
+.platform-icon {
+width: 55px;
+height: 55px;
+}
+.profile-img {
+width: 345px;
+height: 345px;
+}
+}
+
+/* Quote & Bio Section */
+.quote-box {
+margin-bottom: 35px;
+padding: 20px 25px;
+border-left: 3px solid #d4af37;
+border-right: 3px solid #d4af37;
+background-color: #2b2b2d;
+border-radius: 8px;
+}
+
+.quote-text {
+font-style: italic;
+font-size: 1.05rem;
+line-height: 1.6;
+color: #e0e0e0;
+margin-bottom: 10px;
+}
+
+.quote-author {
+font-size: 0.9rem;
+letter-spacing: 2px;
+color: #d4af37;
 font-weight: 500;
+}
+
+.bio-section {
+text-align: left;
+line-height: 1.8;
+color: #cccccc;
+margin-bottom: 50px;
+padding: 0 10px;
+}
+
+.bio-section p {
+margin-bottom: 20px;
+font-size: 0.98rem;
+}
+
+.no-wrap {
+white-space: nowrap;
+}
+
+/* Footer in BOLD & Simboli Copyright Nativi Allineati */
+.footer {
+font-size: 0.85rem;
+font-weight: 700;
+color: #aaaaaa;
+border-top: 1px solid #4a4a4d;
+padding-top: 25px;
+line-height: 1.7;
+letter-spacing: 0.5px;
+}
+
+.footer p {
+margin-bottom: 5px;
+}
+
+.symbol-c, .symbol-p {
+display: inline-block;
+font-weight: 700;
+font-size: 0.95rem;
+vertical-align: middle;
+margin-right: 2px;
 }
 </style>
 </head>
 <body>
 
-<div class="main-container">
+<main class="container">
 
-<!-- 1. PLAYER RADIO -->
+<!-- Header con Radio Oro & Silver al posto del logo -->
+<header class="header">
 <div class="radio-container">
 <div class="radio-header">
 <svg class="radio-icon-svg" viewBox="0 0 24 24">
@@ -349,79 +416,114 @@ font-weight: 500;
 <div class="playlist-container" id="playlist"></div>
 </div>
 
-<!-- 2. TITOLO SITO -->
-<h1 class="site-title">ANTONYDALESSANDRO.MUSIC</h1>
+<h1 class="brand-title">ANTONYDALESSANDRO.MUSIC</h1>
+</header>
 
-<!-- 3. FOTO PROFILO -->
-<img src="foto.jpg" alt="Antony D'Alessandro" class="profile-pic">
+<!-- Profile Section -->
+<section class="profile-section">
+<img src="foto.jpg" alt="Antony D'Alessandro" class="profile-img">
+<h2 class="artist-name">ANTONY D’ALESSANDRO</h2>
+<p class="artist-role">COMPOSER</p>
+</section>
 
-<!-- 4. BIOGRAFIA -->
-<p class="bio">
-Compositore e producer indie. Esploro sonorità ambient, elettroniche e cinematografiche, creando paesaggi sonori che raccontano storie ed emozioni.
-</p>
+<!-- Streaming Icons Grid -->
+<section class="platforms-section">
+<div class="grid-container">
 
-<!-- 5. CITAZIONE -->
-<p class="quote">
-"La musica è il linguaggio con cui il silenzio impara a parlare."
-</p>
+<!-- Linea 1 -->
+<a href="https://antonydalessandro.bandcamp.com" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-bandcamp.png" alt="Bandcamp" class="platform-icon">
+</a>
+<a href="https://amazingradio.com/profile/antonydalessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-amazing-radio.png" alt="Amazing Radio" class="platform-icon">
+</a>
+<a href="https://myspace.com/antonydalessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-myspace.png" alt="MySpace" class="platform-icon">
+</a>
+<a href="https://www.tiktok.com/@antony.dalessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-tiktok.png" alt="TikTok" class="platform-icon">
+</a>
 
-<!-- 6. GRIGLIA ICONE STREAMING -->
-<div class="links-grid">
-<a href="https://open.spotify.com" target="_blank" class="link-card">
-<img src="spotify.svg" alt="Spotify">
-<span>Spotify</span>
+<!-- Linea 2 -->
+<a href="https://open.spotify.com/artist/0Hu3QFCfjtgKp2oB2ssobP" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-spotify.png" alt="Spotify" class="platform-icon">
 </a>
-<a href="https://music.apple.com" target="_blank" class="link-card">
-<img src="apple.svg" alt="Apple Music">
-<span>Apple</span>
+<a href="https://music.apple.com/gb/artist/antony-dalessandro/1066494662" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-apple-music.png" alt="Apple Music" class="platform-icon">
 </a>
-<a href="https://music.youtube.com" target="_blank" class="link-card">
-<img src="youtube.svg" alt="YouTube">
-<span>YouTube</span>
+<a href="https://www.youtube.com/@AntonyDAlessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-youtube.png" alt="YouTube" class="platform-icon">
 </a>
-<a href="https://amazon.com" target="_blank" class="link-card">
-<img src="amazon.svg" alt="Amazon Music">
-<span>Amazon</span>
+<a href="https://soundcloud.com/antonydalessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-soundcloud.png" alt="SoundCloud" class="platform-icon">
 </a>
-<a href="https://deezer.com" target="_blank" class="link-card">
-<img src="deezer.svg" alt="Deezer">
-<span>Deezer</span>
+
+<!-- Linea 3 -->
+<a href="https://music.youtube.com/channel/UCbCx9lsdH63gI3UswipVmxA" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-youtube-music.png" alt="YouTube Music" class="platform-icon">
 </a>
-<a href="https://tidal.com" target="_blank" class="link-card">
-<img src="tidal.svg" alt="Tidal">
-<span>Tidal</span>
+<a href="https://music.amazon.com/artists/B01AOW18IG/antony-d'alessandro" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-amazon-music.png" alt="Amazon Music" class="platform-icon">
 </a>
-<a href="https://bandcamp.com" target="_blank" class="link-card">
-<img src="bandcamp.svg" alt="Bandcamp">
-<span>Bandcamp</span>
+<a href="https://x.com/AntonyD_Music" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-x.png" alt="X" class="platform-icon">
 </a>
-<a href="https://soundcloud.com" target="_blank" class="link-card">
-<img src="soundcloud.svg" alt="SoundCloud">
-<span>SoundCloud</span>
+<a href="https://www.deezer.com/en/artist/9484718" target="_blank" rel="noopener" class="platform-link">
+<img src="icon-deezer.png" alt="Deezer" class="platform-icon">
 </a>
-<a href="https://instagram.com" target="_blank" class="link-card">
-<img src="instagram.svg" alt="Instagram">
-<span>Instagram</span>
-</a>
-<a href="https://facebook.com" target="_blank" class="link-card">
-<img src="facebook.svg" alt="Facebook">
-<span>Facebook</span>
-</a>
-<a href="https://tiktok.com" target="_blank" class="link-card">
-<img src="tiktok.svg" alt="TikTok">
-<span>TikTok</span>
-</a>
-<a href="https://x.com" target="_blank" class="link-card">
-<img src="x.svg" alt="X">
-<span>X</span>
-</a>
-</div>
 
 </div>
+</section>
 
+<!-- Quote Field -->
+<div class="quote-box">
+<p class="quote-text">"Exploring and creating from within is where true magic happens. It is the highest form of freedom, where the unknown unfolds."</p>
+<p class="quote-author">— Antony D'Alessandro —</p>
+</div>
+
+<!-- Biography Section -->
+<section class="bio-section">
+<p>
+Antony D’Alessandro is an independent composer whose work redefines the boundaries between sonic architecture and emotional depth. Defying simple categorisation, his music weaves a fluid tapestry through <span class="no-wrap">avant-garde</span> electronics, ethereal spaces, and <span class="no-wrap">art-pop</span>, often laced with psychedelic undertones, turning sound into an uncompromising immersive journey.
+</p>
+
+<p>
+Driven by a relentless search for new musical idioms, D’Alessandro conceptualised the genre <span class="no-wrap">"Sci-Fi Tekno"</span> through his albums <span class="no-wrap">"TEKNOTICA"</span> and <span class="no-wrap">"Teknotica Gold"</span>, fusing dystopian, <span class="no-wrap">high-concept</span> atmospheres with driving machine rhythms. This fascination with futuristic themes deepened with the EP <span class="no-wrap">"The Borg Queen"</span>, a <span class="no-wrap">sci-fi</span> ambient tribute to the iconic Star Trek character, where synthetic textures are translated into a haunting, panoramic aural landscape.
+</p>
+
+<p>
+The evolution of his sound culminated in <span class="no-wrap">"B L U E M O O R"</span>, establishing both a visionary opus and an entirely new musical genre, descending straight into the moor of the soul. Within this body of work, D’Alessandro navigates the tension between fragility and digital rigour, shifting from the claustrophobic anxiety of subconscious shadows to the expansive stillness of open space—a sequence of auditory movements that consciously dismantle conventional song structure.
+</p>
+
+<p>
+Despite the vastness of these creative territories, his work remains deeply rooted in personal truth. Bridging the introspective Italian songwriting of the album <span class="no-wrap">"Parlo da Solo"</span> and the heartfelt resonance of <span class="no-wrap">"All the Love I Can"</span>, a dedication to his wife, D’Alessandro grounds his sonic explorations in rare, unfiltered human vulnerability.
+</p>
+
+<p>
+His latest release, <span class="no-wrap">"CHIAROSCURO"</span>, marks a profound refinement of this artistic trajectory. Living up to its name, this cinematic dark ambient instrumental is built entirely on contrast, playing out like a <span class="no-wrap">slow-moving</span> shadow play. It balances fleeting moments of light against a creeping disquiet, steadily intensifying before dissolving into a cold abyss.
+</p>
+
+<p>
+Whether navigating the outermost edges of the unknown or the intricate labyrinths of the human psyche, Antony D’Alessandro continues to craft music for those who seek to lose themselves in the sound.
+</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<p>ANTONYDALESSANDRO.MUSIC</p>
+<p><span class="symbol-c">&copy;</span> <span class="symbol-p">&#8471;</span> 1982-<span id="year"></span> Antony D'Alessandro</p>
+<p>All Rights Reserved.</p>
+</footer>
+
+</main>
+
+<!-- Elemento Audio Nascosto -->
 <audio id="audio-player" preload="metadata"></audio>
 
+<!-- Script Radio e Anno -->
 <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
 const tracks = [
 "The Land of Silence",
 "Hollow Bloom",
@@ -488,7 +590,7 @@ isPlaying = true;
 audio.play().then(() => {
 playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
 }).catch(err => {
-console.log("Play bloccato dall'utente o file mancante", err);
+console.log("Play attesa interazione", err);
 });
 }
 
@@ -552,8 +654,8 @@ const secs = Math.floor(seconds % 60);
 return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// Carica la prima traccia
 loadTrack(0);
 </script>
+
 </body>
 </html>
