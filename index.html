@@ -237,19 +237,17 @@ margin-top: 0;
 margin-bottom: 10px;
 }
 
-/* Profile Section - Foto allineata perfettamente alla larghezza del player */
+/* Profile Section */
 .profile-section {
 margin-bottom: 40px;
 }
 
 .profile-img {
-width: 100%;
-max-width: 500px;
-height: auto;
-aspect-ratio: 1 / 1;
+width: 425px;
+height: 425px;
 object-fit: cover;
-border-radius: 16px;
-border: 3px solid #d4af37;
+border-radius: 12px;
+border: 2px solid #d4af37; /* Modificato a 2px per combaciare perfettamente col player */
 margin-bottom: 20px;
 box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
@@ -304,6 +302,10 @@ gap: 15px;
 .platform-icon {
 width: 55px;
 height: 55px;
+}
+.profile-img {
+width: 345px;
+height: 345px;
 }
 .radio-brand-title {
 font-size: 0.8rem;
@@ -401,7 +403,7 @@ margin-right: 2px;
 </div>
 
 <div class="radio-screen">
-<div class="track-number" id="track-number">Traccia 01 / 12</div>
+<div class="track-number" id="track-number">TRACK 01 / 12</div>
 <div class="track-title" id="track-title">The Land of Silence</div>
 
 <div class="progress-area">
@@ -591,7 +593,7 @@ currentTrackIndex = index;
 const fileNumber = index + 1;
 audio.src = `./${fileNumber}.mp3`;
 trackTitle.textContent = tracks[index];
-trackNumber.textContent = `Traccia ${String(fileNumber).padStart(2, '0')} / 12`;
+trackNumber.textContent = `TRACK ${String(fileNumber).padStart(2, '0')} / 12`;
 renderPlaylist();
 }
 
@@ -638,34 +640,4 @@ playAudio();
 
 audio.addEventListener('timeupdate', () => {
 if (isNaN(audio.duration)) return;
-const progressPercent = (audio.currentTime / audio.duration) * 100;
-progressBar.style.width = `${progressPercent}%`;
-currentTimeEl.textContent = formatTime(audio.currentTime);
-durationEl.textContent = formatTime(audio.duration);
-});
-
-audio.addEventListener('ended', () => {
-currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-loadTrack(currentTrackIndex);
-playAudio();
-});
-
-progressContainer.addEventListener('click', (e) => {
-const width = progressContainer.clientWidth;
-const clickX = e.offsetX;
-if (!isNaN(audio.duration)) {
-audio.currentTime = (clickX / width) * audio.duration;
-}
-});
-
-function formatTime(seconds) {
-const mins = Math.floor(seconds / 60);
-const secs = Math.floor(seconds % 60);
-return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-}
-
-loadTrack(0);
-</script>
-
-</body>
-</html>
+const progressPercent = (audio.currentTime / audio.duration) *
