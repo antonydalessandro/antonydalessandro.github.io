@@ -47,31 +47,17 @@ inset 0 1px 1px rgba(255, 255, 255, 0.1),
 text-align: left;
 }
 
-/* Header bilanciato per centrare perfettamente il titolo */
+/* Testata minimale più stretta e perfettamente centrata */
 .radio-header {
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
-margin-bottom: 14px;
-padding-bottom: 10px;
+margin-bottom: 12px;
+padding-bottom: 8px;
 border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.radio-header-left {
-display: flex;
-align-items: center;
-width: 50px; /* Spazio fisso a sinistra */
-}
-
-.radio-icon-svg {
-width: 44px;
-height: 44px;
-fill: #d4af37;
-filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
-flex-shrink: 0;
-}
-
-/* Titolo Perfettamente Centrato */
+/* Titolo Minimal Centrato */
 .radio-brand-title {
 font-size: 0.95rem;
 font-weight: 600;
@@ -79,23 +65,7 @@ letter-spacing: 2px;
 color: #d4af37;
 text-transform: uppercase;
 line-height: 1.2;
-flex: 1;
 text-align: center;
-padding: 0 5px;
-}
-
-.radio-grille {
-display: flex;
-gap: 3px;
-width: 50px; /* Spazio fisso a destra speculare a sinistra */
-justify-content: flex-end;
-}
-
-.grille-bar {
-width: 3px;
-height: 16px;
-background: linear-gradient(to bottom, #e8e8e8, #707070);
-border-radius: 2px;
 }
 
 .radio-screen {
@@ -311,8 +281,8 @@ width: 55px;
 height: 55px;
 }
 .radio-brand-title {
-font-size: 0.75rem;
-letter-spacing: 1px;
+font-size: 0.8rem;
+letter-spacing: 1.5px;
 }
 }
 
@@ -390,19 +360,7 @@ margin-right: 2px;
 <header class="header">
 <div class="radio-container">
 <div class="radio-header">
-<div class="radio-header-left">
-<svg class="radio-icon-svg" viewBox="0 0 24 24">
-<path d="M3.24 6.15C2.51 6.43 2 7.15 2 8v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2H8.3l7.43-3.71c.41-.21.57-.71.36-1.12-.21-.41-.71-.57-1.12-.36L3.24 6.15zM7 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13 1h-8v-2h8v2zm0-4h-8v-2h8v2z"/>
-</svg>
-</div>
 <span class="radio-brand-title">ANTONYDALESSANDRO.MUSIC</span>
-<div class="radio-grille">
-<div class="grille-bar"></div>
-<div class="grille-bar"></div>
-<div class="grille-bar"></div>
-<div class="grille-bar"></div>
-<div class="grille-bar"></div>
-</div>
 </div>
 
 <div class="radio-screen">
